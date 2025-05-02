@@ -1,0 +1,1354 @@
+/* broker-styles.css */
+/* 부동산 중개사 대시보드를 위한 추가 스타일 */
+
+/* 중개사 대시보드 컬러 테마 */
+.sidebar {
+    background-color: #1a3a5f;
+}
+
+.sidebar ul li a.active {
+    background-color: #3498db;
+    border-left: 4px solid #2980b9;
+}
+
+.sidebar ul li a:hover {
+    background-color: #2c5282;
+}
+
+/* 중개사 대시보드 헤더 */
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-header h2 {
+    color: #1a3a5f;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    color: #6b7280;
+    font-size: 0.95rem;
+}
+
+/* 매물 카드 스타일 */
+.property-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border: 1px solid #f3f4f6;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.property-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.property-card:hover .property-image img {
+    transform: scale(1.05);
+}
+
+.property-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #3498db;
+    color: white;
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.property-score {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.property-score span {
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.property-score small {
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+.property-content {
+    padding: 20px;
+}
+
+.property-content h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #1a3a5f;
+}
+
+.property-meta {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f3f4f6;
+    padding-bottom: 15px;
+}
+
+.property-meta span {
+    margin-right: 15px;
+    font-size: 0.9rem;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+}
+
+.property-meta span i {
+    margin-right: 5px;
+    color: #3498db;
+}
+
+.property-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.property-tag {
+    background-color: #f0f9ff;
+    color: #3498db;
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border-radius: 30px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.property-analysis {
+    margin-bottom: 15px;
+}
+
+.analysis-item {
+    margin-bottom: 8px;
+}
+
+.analysis-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 0.85rem;
+}
+
+.analysis-bar {
+    height: 6px;
+    background-color: #f3f4f6;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.analysis-fill {
+    height: 100%;
+    background-color: #3498db;
+    border-radius: 3px;
+}
+
+.property-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.property-actions button {
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* 프랜차이즈 조건 카드 스타일 */
+.franchise-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #f3f4f6;
+}
+
+.franchise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.franchise-header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.franchise-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.franchise-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.franchise-info h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #1a3a5f;
+}
+
+.franchise-category {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.franchise-content {
+    padding: 20px;
+}
+
+.franchise-requirements h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #1a3a5f;
+}
+
+.requirement-item {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.requirement-icon {
+    min-width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #f0f9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    color: #3498db;
+    font-size: 0.8rem;
+}
+
+.requirement-text {
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.franchise-areas {
+    margin-top: 20px;
+}
+
+.areas-header {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #1a3a5f;
+}
+
+.area-tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.area-tag {
+    background-color: #f0f9ff;
+    color: #3498db;
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border-radius: 30px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.matching-score {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #f3f4f6;
+}
+
+.score-header {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #1a3a5f;
+}
+
+.score-container {
+    display: flex;
+    align-items: center;
+}
+
+.score-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-weight: bold;
+    color: white;
+    font-size: 1.3rem;
+    background: conic-gradient(#3498db 0% calc(var(--score) * 1%), #f3f4f6 calc(var(--score) * 1%) 100%);
+    position: relative;
+}
+
+.score-circle::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.score-value {
+    position: relative;
+    z-index: 2;
+    color: #1a3a5f;
+}
+
+.score-text {
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.franchise-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #f3f4f6;
+}
+
+/* 채팅 인터페이스 스타일 */
+.chat-container {
+    display: grid;
+    grid-template-columns: 300px 1fr 320px;
+    gap: 20px;
+    height: calc(100vh - 200px);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.chat-sidebar {
+    border-right: 1px solid #f3f4f6;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-search {
+    padding: 15px;
+    display: flex;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.chat-search input {
+    flex: 1;
+    border-radius: 6px;
+    padding: 10px 15px;
+    border: 1px solid #e5e7eb;
+    outline: none;
+    margin-right: 10px;
+}
+
+.chat-search .btn-search {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background-color: #f3f4f6;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-search .btn-search:hover {
+    background-color: #e5e7eb;
+}
+
+.chat-list {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.chat-item {
+    display: flex;
+    padding: 15px;
+    border-bottom: 1px solid #f3f4f6;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.chat-item:hover, .chat-item.active {
+    background-color: #f9fafb;
+}
+
+.chat-item.active {
+    border-left: 3px solid #3498db;
+}
+
+.chat-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-right: 15px;
+}
+
+.chat-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.status-dot {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.status-dot.online {
+    background-color: #10b981;
+}
+
+.status-dot.offline {
+    background-color: #9ca3af;
+}
+
+.chat-info {
+    flex: 1;
+    overflow: hidden;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.chat-header h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1a3a5f;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chat-time {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    white-space: nowrap;
+}
+
+.chat-preview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-preview p {
+    font-size: 0.85rem;
+    color: #6b7280;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+}
+
+.unread-count {
+    background-color: #3498db;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 10px;
+    min-width: 18px;
+    text-align: center;
+}
+
+.chat-main {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.chat-user {
+    display: flex;
+    align-items: center;
+}
+
+.chat-user-info {
+    margin-left: 15px;
+}
+
+.chat-user-info h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a3a5f;
+    margin-bottom: 3px;
+}
+
+.chat-user-info p {
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
+
+.chat-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f3f4f6;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.btn-icon:hover {
+    background-color: #e5e7eb;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f9fafb;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-date {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.message-date span {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #6b7280;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.message {
+    display: flex;
+    margin-bottom: 15px;
+    max-width: 70%;
+}
+
+.message.sent {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.message.received {
+    align-self: flex-start;
+}
+
+.message-content {
+    background-color: white;
+    padding: 12px 15px;
+    border-radius: 18px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    margin: 0 10px;
+}
+
+.message.sent .message-content {
+    background-color: #3498db;
+    color: white;
+    border-top-right-radius: 4px;
+}
+
+.message.received .message-content {
+    background-color: white;
+    border-top-left-radius: 4px;
+}
+
+.message-time {
+    font-size: 0.7rem;
+    color: #9ca3af;
+    align-self: flex-end;
+    margin-bottom: 3px;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-top: 1px solid #f3f4f6;
+}
+
+.chat-input input {
+    flex: 1;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 30px;
+    background-color: #f3f4f6;
+    outline: none;
+    margin: 0 10px;
+}
+
+.send-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.send-btn:hover {
+    background-color: #2980b9;
+}
+
+/* 채팅 세부 정보 패널 */
+.chat-details {
+    border-left: 1px solid #f3f4f6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.detail-header {
+    margin-bottom: 20px;
+}
+
+.detail-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a3a5f;
+}
+
+.property-detail {
+    margin-bottom: 25px;
+}
+
+.property-image {
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.property-info h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a3a5f;
+    margin-bottom: 10px;
+}
+
+.view-property {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3498db;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.view-property:hover {
+    text-decoration: underline;
+}
+
+.detail-section {
+    margin-bottom: 25px;
+}
+
+.detail-section h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a3a5f;
+    margin-bottom: 15px;
+}
+
+.shared-files {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+}
+
+.file-item i {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-right: 10px;
+}
+
+.file-info {
+    flex: 1;
+}
+
+.file-info h4 {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #1a3a5f;
+    margin-bottom: 3px;
+}
+
+.file-info p {
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
+
+.quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quick-actions button {
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+}
+
+/* 투어 일정 페이지 스타일 */
+.tour-calendar {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.calendar-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.calendar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.calendar-nav h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a3a5f;
+    margin: 0 15px;
+}
+
+.btn-calendar-nav {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f3f4f6;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar-view-switch {
+    display: flex;
+    gap: 10px;
+}
+
+.view-btn {
+    padding: 8px 15px;
+    border-radius: 6px;
+    background-color: #f3f4f6;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.view-btn.active {
+    background-color: #3498db;
+    color: white;
+}
+
+.calendar-grid {
+    padding: 20px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.day-header {
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #6b7280;
+    padding: 10px 0;
+}
+
+.calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.date-cell {
+    min-height: 100px;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    padding: 10px;
+}
+
+.date-cell.other-month {
+    background-color: #f3f4f6;
+    opacity: 0.5;
+}
+
+.date-cell.today {
+    background-color: #f0f9ff;
+    border: 1px solid #3498db;
+}
+
+.date-number {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1a3a5f;
+    margin-bottom: 10px;
+}
+
+.other-month .date-number {
+    color: #9ca3af;
+}
+
+.event-item {
+    padding: 5px 8px;
+    border-radius: 4px;
+    background-color: #3498db;
+    color: white;
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.event-item.completed {
+    background-color: #10b981;
+}
+
+.event-item.cancelled {
+    background-color: #ef4444;
+}
+
+.tour-list-view {
+    margin-top: 30px;
+}
+
+.tour-list-header {
+    border-bottom: 1px solid #f3f4f6;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.tour-list-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a3a5f;
+}
+
+.upcoming-tours, .completed-tours {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a3a5f;
+    margin-bottom: 15px;
+}
+
+/* 계약 관리 페이지 스타일 */
+.ongoing-contracts-section, .completed-contracts-section {
+    margin-bottom: 30px;
+}
+
+.ongoing-contracts-section h3, .completed-contracts-section h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a3a5f;
+    margin-bottom: 20px;
+}
+
+.contracts-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.contract-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #f3f4f6;
+}
+
+.contract-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contract-status {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.contract-status.negotiation {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.contract-status.document {
+    background-color: #dbeafe;
+    color: #2563eb;
+}
+
+.contract-status.payment {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+.contract-status.completed {
+    background-color: #a7f3d0;
+    color: #059669;
+}
+
+.contract-header {
+    padding: 20px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.contract-header h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a3a5f;
+    margin-bottom: 5px;
+}
+
+.contract-date {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.contract-parties {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.party {
+    text-align: center;
+}
+
+.party-label {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-bottom: 5px;
+}
+
+.party-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1a3a5f;
+}
+
+.party-separator {
+    color: #9ca3af;
+}
+
+.contract-details {
+    padding: 20px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.detail-item i {
+    width: 25px;
+    color: #3498db;
+    margin-right: 10px;
+}
+
+.contract-signatures {
+    padding: 20px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.signature-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-label {
+    font-size: 0.9rem;
+    color: #1a3a5f;
+}
+
+.status-indicator {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.status-indicator.pending {
+    background-color: #f59e0b;
+}
+
+.status-indicator.completed {
+    background-color: #10b981;
+}
+
+.contract-actions {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 성과 분석 페이지 스타일 */
+.analytics-period {
+    margin-top: 15px;
+}
+
+.performance-metrics {
+    padding: 20px 0;
+}
+
+.metric-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.metric-card {
+    flex: 1;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.metric-card.highlight {
+    background-color: #f0f9ff;
+    border: 1px solid #bfdbfe;
+}
+
+.metric-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a3a5f;
+    margin-bottom: 5px;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.metric-trend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 0.85rem;
+}
+
+.metric-trend.up {
+    color: #10b981;
+}
+
+.metric-trend.down {
+    color: #ef4444;
+}
+
+.analytics-charts {
+    margin-top: 30px;
+}
+
+.chart-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.chart-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+.chart-header {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chart-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a3a5f;
+}
+
+.chart-legend {
+    display: flex;
+    gap: 15px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.chart-container {
+    height: 300px;
+    position: relative;
+}
+
+.chart-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.chart-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    font-style: italic;
+}
+
+/* 도움말 모달 스타일 */
+.help-modal .modal-content {
+    max-width: 600px;
+}
+
+.help-section {
+    margin-bottom: 20px;
+}
+
+.help-section h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a3a5f;
+    margin-bottom: 10px;
+}
+
+.help-list {
+    list-style-type: none;
+}
+
+.help-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.help-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #f0f9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    color: #3498db;
+    font-size: 0.8rem;
+}
+
+.help-text {
+    flex: 1;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1024px) {
+    .chat-container {
+        grid-template-columns: 250px 1fr;
+    }
+    
+    .chat-details {
+        display: none;
+    }
+    
+    .chart-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .chat-container {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    
+    .chat-sidebar {
+        display: none;
+    }
+    
+    .tour-calendar .calendar-dates {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .tour-calendar .date-cell {
+        min-height: auto;
+        padding: 15px;
+    }
+    
+    .contracts-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .metric-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* 부동산 중개사 대시보드 사이드바 링크 클릭 영역 개선 */
+.sidebar ul li a {
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+}
+
+/* 모바일에서 사이드바가 표시될 때 */
+@media (max-width: 768px) {
+    .sidebar.show {
+        left: 0;
+        pointer-events: auto;
+    }
+    
+    .sidebar.show ul li a {
+        pointer-events: auto;
+    }
+}

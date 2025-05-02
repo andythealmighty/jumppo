@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건 카드 관리 - AI 점포데이터 거래소</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>AI 점포데이터 거래소</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="franchise-dashboard.html">프랜차이즈 대시보드</a></li>
+                    <li><a href="broker-dashboard.html">부동산 중개사 대시보드</a></li>
+                    <li><a href="#" class="user-profile">홍길동님 <i class="fas fa-user-circle"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="franchise-dashboard.html"><i class="fas fa-tachometer-alt"></i> 대시보드</a></li>
+                <li><a href="franchise-search.html"><i class="fas fa-search"></i> 매물 검색</a></li>
+                <li><a href="franchise-ai-matching.html"><i class="fas fa-magic"></i> AI 매칭</a></li>
+                <li><a href="franchise-conditions.html" class="active"><i class="fas fa-building"></i> 조건 카드 관리</a></li>
+                <li><a href="franchise-tours.html"><i class="fas fa-calendar-alt"></i> 투어 일정</a></li>
+                <li><a href="franchise-contracts.html"><i class="fas fa-file-contract"></i> 계약 관리</a></li>
+                <li><a href="franchise-analytics.html"><i class="fas fa-chart-bar"></i> 데이터 분석</a></li>
+                <li><a href="franchise-settings.html"><i class="fas fa-cog"></i> 설정</a></li>
+            </ul>
+        </aside>
+
+        <main class="dashboard-content">
+            <div class="page-header">
+                <h2>조건 카드 관리</h2>
+                <p>자주 사용하는 매물 검색 조건을 카드로 관리하고 중개사들에게 공유하세요</p>
+                <button class="btn-primary btn-add-card"><i class="fas fa-plus"></i> 조건 카드 추가</button>
+            </div>
+
+            <!-- 조건 카드 목록 -->
+            <section class="condition-cards-section">
+                <div class="condition-cards-grid">
+                    <!-- 조건 카드 1 -->
+                    <div class="condition-card-item">
+                        <div class="card-header">
+                            <h3>강남역 10분 이내</h3>
+                            <div class="card-actions">
+                                <button class="btn-card-edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-card-delete"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-status active">
+                            <span class="status-dot"></span>
+                            <span class="status-text">활성화됨</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span class="card-tag">30~50평</span>
+                                <span class="card-tag">월세 500~800만원</span>
+                                <span class="card-tag">카페</span>
+                                <span class="card-tag">1층</span>
+                                <span class="card-tag">강남구</span>
+                            </div>
+                            <div class="card-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">매칭 매물</span>
+                                    <span class="stat-value">28</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">관심 중개사</span>
+                                    <span class="stat-value">12</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">투어 예약</span>
+                                    <span class="stat-value">3</span>
+                                </div>
+                            </div>
+                            <div class="card-actions-bottom">
+                                <button class="btn-outline btn-view-matches">매치 보기</button>
+                                <button class="btn-primary btn-share">공유하기</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 조건 카드 2 -->
+                    <div class="condition-card-item">
+                        <div class="card-header">
+                            <h3>홍대입구역 도보 5분</h3>
+                            <div class="card-actions">
+                                <button class="btn-card-edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-card-delete"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-status active">
+                            <span class="status-dot"></span>
+                            <span class="status-text">활성화됨</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span class="card-tag">20~40평</span>
+                                <span class="card-tag">월세 300~600만원</span>
+                                <span class="card-tag">레스토랑</span>
+                                <span class="card-tag">지하~2층</span>
+                                <span class="card-tag">마포구</span>
+                            </div>
+                            <div class="card-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">매칭 매물</span>
+                                    <span class="stat-value">42</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">관심 중개사</span>
+                                    <span class="stat-value">18</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">투어 예약</span>
+                                    <span class="stat-value">5</span>
+                                </div>
+                            </div>
+                            <div class="card-actions-bottom">
+                                <button class="btn-outline btn-view-matches">매치 보기</button>
+                                <button class="btn-primary btn-share">공유하기</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 조건 카드 3 -->
+                    <div class="condition-card-item">
+                        <div class="card-header">
+                            <h3>판교역 인근</h3>
+                            <div class="card-actions">
+                                <button class="btn-card-edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-card-delete"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-status active">
+                            <span class="status-dot"></span>
+                            <span class="status-text">활성화됨</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span class="card-tag">40~70평</span>
+                                <span class="card-tag">월세 700~1000만원</span>
+                                <span class="card-tag">사무실</span>
+                                <span class="card-tag">3층 이상</span>
+                                <span class="card-tag">성남시</span>
+                            </div>
+                            <div class="card-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">매칭 매물</span>
+                                    <span class="stat-value">15</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">관심 중개사</span>
+                                    <span class="stat-value">6</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">투어 예약</span>
+                                    <span class="stat-value">2</span>
+                                </div>
+                            </div>
+                            <div class="card-actions-bottom">
+                                <button class="btn-outline btn-view-matches">매치 보기</button>
+                                <button class="btn-primary btn-share">공유하기</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 조건 카드 4 -->
+                    <div class="condition-card-item">
+                        <div class="card-header">
+                            <h3>신림역 도보 10분</h3>
+                            <div class="card-actions">
+                                <button class="btn-card-edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-card-delete"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-status inactive">
+                            <span class="status-dot"></span>
+                            <span class="status-text">비활성화됨</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span class="card-tag">15~25평</span>
+                                <span class="card-tag">월세 200~400만원</span>
+                                <span class="card-tag">분식/치킨</span>
+                                <span class="card-tag">1층</span>
+                                <span class="card-tag">관악구</span>
+                            </div>
+                            <div class="card-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">매칭 매물</span>
+                                    <span class="stat-value">19</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">관심 중개사</span>
+                                    <span class="stat-value">3</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">투어 예약</span>
+                                    <span class="stat-value">0</span>
+                                </div>
+                            </div>
+                            <div class="card-actions-bottom">
+                                <button class="btn-outline btn-view-matches">매치 보기</button>
+                                <button class="btn-primary btn-activate">활성화하기</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 조건 카드 5 -->
+                    <div class="condition-card-item">
+                        <div class="card-header">
+                            <h3>양재역 인근</h3>
+                            <div class="card-actions">
+                                <button class="btn-card-edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-card-delete"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-status draft">
+                            <span class="status-dot"></span>
+                            <span class="status-text">초안</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tags">
+                                <span class="card-tag">25~40평</span>
+                                <span class="card-tag">월세 400~700만원</span>
+                                <span class="card-tag">패션/의류</span>
+                                <span class="card-tag">1~2층</span>
+                                <span class="card-tag">서초구</span>
+                            </div>
+                            <div class="card-info-draft">
+                                <span><i class="fas fa-info-circle"></i> 이 조건 카드는 아직 활성화되지 않았습니다.</span>
+                            </div>
+                            <div class="card-actions-bottom">
+                                <button class="btn-outline btn-edit-draft">편집하기</button>
+                                <button class="btn-primary btn-publish">발행하기</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 새 조건 카드 생성 -->
+                    <div class="condition-card-new">
+                        <div class="new-card-content">
+                            <div class="new-card-icon">
+                                <i class="fas fa-plus-circle"></i>
+                            </div>
+                            <h3>새 조건 카드 만들기</h3>
+                            <p>원하는 위치와 매물 조건을 설정하여 새로운 조건 카드를 만드세요.</p>
+                            <button class="btn-primary btn-create-card">카드 생성하기</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 조건 카드 통계 섹션 -->
+            <section class="card-stats-section">
+                <div class="section-header">
+                    <h3>조건 카드 통계</h3>
+                </div>
+                <div class="stats-grid">
+                    <div class="stats-card">
+                        <div class="stats-card-header">
+                            <h4>지역별 관심도</h4>
+                        </div>
+                        <div class="stats-card-body">
+                            <div class="chart-placeholder">
+                                <img src="assets/chart-area-interest.jpg" alt="지역별 관심도 차트">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-card">
+                        <div class="stats-card-header">
+                            <h4>업종별 매칭 현황</h4>
+                        </div>
+                        <div class="stats-card-body">
+                            <div class="chart-placeholder">
+                                <img src="assets/chart-business-match.jpg" alt="업종별 매칭 현황 차트">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-card">
+                        <div class="stats-card-header">
+                            <h4>월별 활동 추이</h4>
+                        </div>
+                        <div class="stats-card-body">
+                            <div class="chart-placeholder">
+                                <img src="assets/chart-monthly-activity.jpg" alt="월별 활동 추이 차트">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-card">
+                        <div class="stats-card-header">
+                            <h4>가격대별 매물 분포</h4>
+                        </div>
+                        <div class="stats-card-body">
+                            <div class="chart-placeholder">
+                                <img src="assets/chart-price-distribution.jpg" alt="가격대별 매물 분포 차트">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 조건 카드 생성/편집 모달 -->
+    <div class="modal" id="cardModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>조건 카드 생성</h3>
+                <button class="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="cardForm">
+                    <div class="form-group">
+                        <label>카드 이름</label>
+                        <input type="text" class="form-input" placeholder="예: 강남역 도보 5분 이내">
+                    </div>
+                    <div class="form-group">
+                        <label>지역 설정</label>
+                        <div class="form-row">
+                            <select class="form-select">
+                                <option>서울특별시</option>
+                                <option>경기도</option>
+                            </select>
+                            <select class="form-select">
+                                <option>강남구</option>
+                                <option>서초구</option>
+                                <option>송파구</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>역세권 설정</label>
+                        <div class="form-row">
+                            <select class="form-select">
+                                <option>강남역</option>
+                                <option>역삼역</option>
+                                <option>선릉역</option>
+                            </select>
+                            <select class="form-select">
+                                <option>도보 5분 이내</option>
+                                <option>도보 10분 이내</option>
+                                <option>도보 15분 이내</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <h4>물건 정보</h4>
+                        <div class="form-group">
+                            <label>면적 범위</label>
+                            <div class="form-row">
+                                <input type="number" class="form-input" placeholder="최소">
+                                <span class="form-text">~</span>
+                                <input type="number" class="form-input" placeholder="최대">
+                                <span class="form-text">평</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>층수</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 지하
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked> 1층
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 2층
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 3층 이상
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>업종</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked> 카페
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 레스토랑
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 소매점
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 뷰티
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <h4>임대 조건</h4>
+                        <div class="form-group">
+                            <label>월세 범위</label>
+                            <div class="form-row">
+                                <input type="number" class="form-input" placeholder="최소">
+                                <span class="form-text">~</span>
+                                <input type="number" class="form-input" placeholder="최대">
+                                <span class="form-text">만원</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>보증금 범위</label>
+                            <div class="form-row">
+                                <input type="number" class="form-input" placeholder="최소">
+                                <span class="form-text">~</span>
+                                <input type="number" class="form-input" placeholder="최대">
+                                <span class="form-text">만원</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <h4>카드 설정</h4>
+                        <div class="form-group">
+                            <label>상태</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="status" checked> 바로 활성화
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="status"> 초안으로 저장
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>공개 범위</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="visibility" checked> 모든 중개사에게 공개
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="visibility"> 특정 중개사만 공개
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-outline btn-cancel">취소</button>
+                        <button type="submit" class="btn-primary btn-save">저장하기</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/franchise-conditions.js"></script>
+</body>
+</html>

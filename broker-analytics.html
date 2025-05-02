@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성과 분석 - 부동산 중개사 대시보드</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/broker-styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>AI 점포데이터 거래소</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="franchise-dashboard.html">프랜차이즈 대시보드</a></li>
+                    <li><a href="broker-dashboard.html" class="active">부동산 중개사 대시보드</a></li>
+                    <li><a href="#" class="user-profile">김중개님 <i class="fas fa-user-circle"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="broker-dashboard.html"><i class="fas fa-tachometer-alt"></i> 대시보드</a></li>
+                <li><a href="broker-property-management.html"><i class="fas fa-building"></i> 매물 관리</a></li>
+                <li><a href="broker-franchise-cards.html"><i class="fas fa-search"></i> 프랜차이즈 조건 카드</a></li>
+                <li><a href="broker-chat.html"><i class="fas fa-comment-alt"></i> 채팅 관리</a></li>
+                <li><a href="broker-tours.html"><i class="fas fa-calendar-alt"></i> 투어 일정</a></li>
+                <li><a href="broker-contracts.html"><i class="fas fa-file-contract"></i> 계약 관리</a></li>
+                <li><a href="broker-analytics.html" class="active"><i class="fas fa-chart-bar"></i> 성과 분석</a></li>
+                <li><a href="broker-settings.html"><i class="fas fa-cog"></i> 설정</a></li>
+            </ul>
+        </aside>
+
+        <main class="dashboard-content">
+            <div class="page-header">
+                <h2>성과 분석</h2>
+                <p>매물과 계약 성과를 분석하고 중개 활동의 효율성을 높이세요.</p>
+                <div class="analytics-period">
+                    <label for="analytics-period-select">분석 기간:</label>
+                    <select id="analytics-period-select" class="form-select">
+                        <option>최근 30일</option>
+                        <option>최근 3개월</option>
+                        <option>최근 6개월</option>
+                        <option>올해</option>
+                        <option>전체 기간</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="dashboard-row">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>성과 요약</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="performance-metrics">
+                            <div class="metric-row">
+                                <div class="metric-card">
+                                    <div class="metric-value">28</div>
+                                    <div class="metric-label">총 매물</div>
+                                    <div class="metric-change positive">+4% <i class="fas fa-arrow-up"></i></div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-value">324</div>
+                                    <div class="metric-label">총 조회수</div>
+                                    <div class="metric-change positive">+15% <i class="fas fa-arrow-up"></i></div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-value">12</div>
+                                    <div class="metric-label">완료된 투어</div>
+                                    <div class="metric-change positive">+20% <i class="fas fa-arrow-up"></i></div>
+                                </div>
+                            </div>
+                            <div class="metric-row">
+                                <div class="metric-card">
+                                    <div class="metric-value">5</div>
+                                    <div class="metric-label">체결된 계약</div>
+                                    <div class="metric-change positive">+25% <i class="fas fa-arrow-up"></i></div>
+                                </div>
+                                <div class="metric-card highlight">
+                                    <div class="metric-value">12.5%</div>
+                                    <div class="metric-label">전환율 (조회 -> 투어)</div>
+                                    <div class="metric-change positive">+3.2% <i class="fas fa-arrow-up"></i></div>
+                                </div>
+                                <div class="metric-card highlight">
+                                    <div class="metric-value">41.7%</div>
+                                    <div class="metric-label">전환율 (투어 -> 계약)</div>
+                                    <div class="metric-change positive">+5.3% <i class="fas fa-arrow-up"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-row">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>매물 성과 추이</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-container">
+                            <div class="chart-placeholder">
+                                <img src="assets/property-performance-chart.png" alt="매물 성과 추이 차트">
+                            </div>
+                            <div class="chart-legend">
+                                <div class="legend-item">
+                                    <span class="legend-color" style="background-color: #4A90E2;"></span>
+                                    <span class="legend-label">매물 조회수</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color" style="background-color: #50E3C2;"></span>
+                                    <span class="legend-label">투어 요청</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-color" style="background-color: #F5A623;"></span>
+                                    <span class="legend-label">계약 체결</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>프랜차이즈 관심도</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-container">
+                            <div class="chart-placeholder">
+                                <img src="assets/franchise-interest-chart.png" alt="프랜차이즈 관심도 차트">
+                            </div>
+                            <div class="top-franchises">
+                                <div class="franchise-item">
+                                    <span class="franchise-name">스타벅스</span>
+                                    <div class="franchise-bar-container">
+                                        <div class="franchise-bar" style="width: 80%;"></div>
+                                        <span class="franchise-value">80%</span>
+                                    </div>
+                                </div>
+                                <div class="franchise-item">
+                                    <span class="franchise-name">BBQ 치킨</span>
+                                    <div class="franchise-bar-container">
+                                        <div class="franchise-bar" style="width: 65%;"></div>
+                                        <span class="franchise-value">65%</span>
+                                    </div>
+                                </div>
+                                <div class="franchise-item">
+                                    <span class="franchise-name">CU</span>
+                                    <div class="franchise-bar-container">
+                                        <div class="franchise-bar" style="width: 60%;"></div>
+                                        <span class="franchise-value">60%</span>
+                                    </div>
+                                </div>
+                                <div class="franchise-item">
+                                    <span class="franchise-name">이디야</span>
+                                    <div class="franchise-bar-container">
+                                        <div class="franchise-bar" style="width: 55%;"></div>
+                                        <span class="franchise-value">55%</span>
+                                    </div>
+                                </div>
+                                <div class="franchise-item">
+                                    <span class="franchise-name">투썸플레이스</span>
+                                    <div class="franchise-bar-container">
+                                        <div class="franchise-bar" style="width: 50%;"></div>
+                                        <span class="franchise-value">50%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-row">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>지역별 매물 성과</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-container">
+                            <div class="map-container">
+                                <img src="assets/seoul-map.png" alt="서울시 지도">
+                                <div class="map-hotspot" style="top: 40%; left: 60%;" title="강남구">
+                                    <span class="hotspot-label">강남</span>
+                                </div>
+                                <div class="map-hotspot" style="top: 30%; left: 40%;" title="마포구">
+                                    <span class="hotspot-label">홍대</span>
+                                </div>
+                                <div class="map-hotspot" style="top: 50%; left: 35%;" title="영등포구">
+                                    <span class="hotspot-label">여의도</span>
+                                </div>
+                            </div>
+                            <div class="area-performance">
+                                <h4>지역별 성과</h4>
+                                <div class="area-item">
+                                    <div class="area-name">강남구</div>
+                                    <div class="area-stats">
+                                        <div class="area-stat">
+                                            <span class="stat-label">매물 수</span>
+                                            <span class="stat-value">12</span>
+                                        </div>
+                                        <div class="area-stat">
+                                            <span class="stat-label">평균 조회수</span>
+                                            <span class="stat-value">85</span>
+                                        </div>
+                                        <div class="area-stat">
+                                            <span class="stat-label">계약률</span>
+                                            <span class="stat-value">25%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="area-item">
+                                    <div class="area-name">마포구</div>
+                                    <div class="area-stats">
+                                        <div class="area-stat">
+                                            <span class="stat-label">매물 수</span>
+                                            <span class="stat-value">8</span>
+                                        </div>
+                                        <div class="area-stat">
+                                            <span class="stat-label">평균 조회수</span>
+                                            <span class="stat-value">72</span>
+                                        </div>
+                                        <div class="area-stat">
+                                            <span class="stat-label">계약률</span>
+                                            <span class="stat-value">18%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="area-item">
+                                    <div class="area-name">영등포구</div>
+                                    <div class="area-stats">
+                                        <div class="area-stat">
+                                            <span class="stat-label">매물 수</span>
+                                            <span class="stat-value">5</span>
+                                        </div>
+                                        <div class="area-stat">
+                                            <span class="stat-label">평균 조회수</span>
+                                            <span class="stat-value">65</span>
+                                        </div>
+                                        <div class="area-stat">
+                                            <span class="stat-label">계약률</span>
+                                            <span class="stat-value">20%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-row">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>매물 성과 상세</h3>
+                        <select class="form-select property-select">
+                            <option>모든 매물</option>
+                            <option>강남대로 123 상가 2층</option>
+                            <option>테헤란로 456 오피스텔 3층</option>
+                            <option>홍대입구역 5번 출구 상가</option>
+                        </select>
+                    </div>
+                    <div class="card-body">
+                        <div class="performance-table-container">
+                            <table class="performance-table">
+                                <thead>
+                                    <tr>
+                                        <th>매물명</th>
+                                        <th>등록일</th>
+                                        <th>조회수</th>
+                                        <th>투어 횟수</th>
+                                        <th>관심 프랜차이즈</th>
+                                        <th>계약 상태</th>
+                                        <th>평균 응답시간</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>강남대로 123 상가 2층</td>
+                                        <td>2023-05-15</td>
+                                        <td>78</td>
+                                        <td>4</td>
+                                        <td>스타벅스, 이디야</td>
+                                        <td><span class="status-badge pending">진행중</span></td>
+                                        <td>12분</td>
+                                    </tr>
+                                    <tr>
+                                        <td>테헤란로 456 오피스텔 3층</td>
+                                        <td>2023-05-20</td>
+                                        <td>65</td>
+                                        <td>3</td>
+                                        <td>이디야, 투썸플레이스</td>
+                                        <td><span class="status-badge pending">진행중</span></td>
+                                        <td>8분</td>
+                                    </tr>
+                                    <tr>
+                                        <td>홍대입구역 5번 출구 상가</td>
+                                        <td>2023-05-22</td>
+                                        <td>52</td>
+                                        <td>2</td>
+                                        <td>CU, BBQ</td>
+                                        <td><span class="status-badge pending">진행중</span></td>
+                                        <td>15분</td>
+                                    </tr>
+                                    <tr>
+                                        <td>강남대로 234 오피스텔 1층</td>
+                                        <td>2023-04-28</td>
+                                        <td>93</td>
+                                        <td>5</td>
+                                        <td>투썸플레이스</td>
+                                        <td><span class="status-badge completed">계약완료</span></td>
+                                        <td>5분</td>
+                                    </tr>
+                                    <tr>
+                                        <td>홍대입구역 3번 출구 상가</td>
+                                        <td>2023-04-15</td>
+                                        <td>86</td>
+                                        <td>4</td>
+                                        <td>BBQ</td>
+                                        <td><span class="status-badge completed">계약완료</span></td>
+                                        <td>10분</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/broker-analytics.js"></script>
+</body>
+</html>

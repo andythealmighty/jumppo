@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 매칭 - AI 점포데이터 거래소</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>AI 점포데이터 거래소</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="franchise-dashboard.html">프랜차이즈 대시보드</a></li>
+                    <li><a href="broker-dashboard.html">부동산 중개사 대시보드</a></li>
+                    <li><a href="#" class="user-profile">홍길동님 <i class="fas fa-user-circle"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="franchise-dashboard.html"><i class="fas fa-tachometer-alt"></i> 대시보드</a></li>
+                <li><a href="franchise-search.html"><i class="fas fa-search"></i> 매물 검색</a></li>
+                <li><a href="franchise-ai-matching.html" class="active"><i class="fas fa-magic"></i> AI 매칭</a></li>
+                <li><a href="franchise-conditions.html"><i class="fas fa-building"></i> 조건 카드 관리</a></li>
+                <li><a href="franchise-tours.html"><i class="fas fa-calendar-alt"></i> 투어 일정</a></li>
+                <li><a href="franchise-contracts.html"><i class="fas fa-file-contract"></i> 계약 관리</a></li>
+                <li><a href="franchise-analytics.html"><i class="fas fa-chart-bar"></i> 데이터 분석</a></li>
+                <li><a href="franchise-settings.html"><i class="fas fa-cog"></i> 설정</a></li>
+            </ul>
+        </aside>
+
+        <main class="dashboard-content">
+            <div class="page-header">
+                <h2>AI 매칭</h2>
+                <p>자연어로 원하는 매물 조건을 설명하면 AI가 최적의 매물을 찾아드립니다</p>
+            </div>
+
+            <!-- AI 매칭 입력 섹션 -->
+            <section class="ai-matching-section">
+                <div class="ai-matching-container">
+                    <div class="ai-input-area">
+                        <h3>원하는 매물 조건을 자유롭게 설명해주세요</h3>
+                        <textarea id="ai-query" placeholder="예: 강남역 5분 거리에 20-30평 사이의 1층 카페 자리를 찾고 있어요. 유동인구가 많고 주변에 오피스가 있으면 좋겠습니다. 월세는 500만원 이내로 생각하고 있습니다." class="ai-textarea"></textarea>
+                        
+                        <div class="ai-examples">
+                            <h4>프롬프트 예시</h4>
+                            <div class="example-prompts">
+                                <button class="example-prompt">홍대입구역 근처 20평대 카페 부지 찾아주세요</button>
+                                <button class="example-prompt">유동인구 많은 강남 지역의 1층 음식점 자리를 찾고 있어요</button>
+                                <button class="example-prompt">월세 300만원 이하의 신촌 인근 상가 추천해주세요</button>
+                                <button class="example-prompt">테헤란로 인근 오피스가 많은 지역에 브런치 카페 오픈하려고 합니다</button>
+                                <button class="example-prompt">분당 서현역 주변 30평 이상 헬스장 운영 가능한 매물 찾아주세요</button>
+                            </div>
+                        </div>
+                        
+                        <div class="ai-history">
+                            <h4>최근 AI 매칭 기록</h4>
+                            <div class="history-items">
+                                <div class="history-item">
+                                    <div class="history-query">신림역 근처에 학생들이 많이 다니는 지역의 분식집 자리를 찾고 있습니다.</div>
+                                    <div class="history-date">2023.06.15</div>
+                                    <button class="btn-history-load"><i class="fas fa-redo-alt"></i></button>
+                                </div>
+                                <div class="history-item">
+                                    <div class="history-query">판교역 도보 10분 이내에 직장인이 많은 곳에 20-30평 규모의 파스타 레스토랑을 오픈하려고 합니다.</div>
+                                    <div class="history-date">2023.06.10</div>
+                                    <button class="btn-history-load"><i class="fas fa-redo-alt"></i></button>
+                                </div>
+                                <div class="history-item">
+                                    <div class="history-query">강남 논현동 인근에 30평 이상 공간으로 권리금이 적은 매물 추천해주세요.</div>
+                                    <div class="history-date">2023.06.05</div>
+                                    <button class="btn-history-load"><i class="fas fa-redo-alt"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="ai-actions">
+                            <button class="btn-outline btn-reset"><i class="fas fa-undo"></i> 초기화</button>
+                            <button class="btn-primary btn-ai-search"><i class="fas fa-magic"></i> AI 매칭 시작</button>
+                        </div>
+                    </div>
+                    
+                    <div class="ai-advanced-options">
+                        <div class="options-header">
+                            <h3>고급 설정</h3>
+                            <button class="btn-toggle-options"><i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <div class="options-content">
+                            <div class="option-group">
+                                <label>매칭 우선순위</label>
+                                <div class="priority-sliders">
+                                    <div class="priority-item">
+                                        <span>위치 정확도</span>
+                                        <input type="range" min="1" max="5" value="3" class="priority-slider">
+                                    </div>
+                                    <div class="priority-item">
+                                        <span>가격 범위</span>
+                                        <input type="range" min="1" max="5" value="4" class="priority-slider">
+                                    </div>
+                                    <div class="priority-item">
+                                        <span>수익성 분석</span>
+                                        <input type="range" min="1" max="5" value="5" class="priority-slider">
+                                    </div>
+                                    <div class="priority-item">
+                                        <span>시설 조건</span>
+                                        <input type="range" min="1" max="5" value="2" class="priority-slider">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="option-group">
+                                <label>매물 조건 필터</label>
+                                <div class="filter-mini">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked> 최근 1개월 내 등록 매물만
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked> 검증된 매물만
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox"> 프리미엄 매물 포함
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI 매칭 결과 섹션 -->
+            <section class="ai-results-section">
+                <div class="results-loading" style="display: none;">
+                    <div class="loading-spinner">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </div>
+                    <div class="loading-text">
+                        <h3>AI가 최적의 매물을 찾고 있습니다</h3>
+                        <p>조건을 분석하고 데이터베이스의 매물과 매칭 중입니다...</p>
+                    </div>
+                </div>
+
+                <div class="results-content">
+                    <div class="results-header">
+                        <h3>AI 매칭 결과</h3>
+                        <div class="results-summary">
+                            <p>총 <strong>8개</strong>의 매물이 조건과 일치합니다. (검색 조건: <span class="highlight">강남역 인근 카페 매물</span>)</p>
+                        </div>
+                    </div>
+
+                    <div class="matching-explanation">
+                        <div class="explanation-header">
+                            <h4>AI 분석 요약</h4>
+                            <button class="btn-toggle-explanation"><i class="fas fa-chevron-down"></i></button>
+                        </div>
+                        <div class="explanation-content">
+                            <p>요청하신 "강남역 5분 거리의 20-30평 카페 자리"에 대한 분석 결과입니다:</p>
+                            <ul>
+                                <li><strong>지역 분석:</strong> 강남역 반경 500m 이내 지역은 유동인구가 평일 평균 87,000명으로 서울 평균 대비 210% 높습니다.</li>
+                                <li><strong>업종 적합성:</strong> 해당 지역 카페 업종의 평균 매출은 월 4,500만원이며, 생존율은 3년 기준 68%로 양호합니다.</li>
+                                <li><strong>투자 수익성:</strong> 평균 월세 대비 매출 비율이 9.2%로 업종 평균 대비 양호한 수준입니다.</li>
+                                <li><strong>경쟁 환경:</strong> 반경 300m 내 유사 업종이 23개로 경쟁이 다소 높은 편이나, 차별화 요소가 있다면 충분한 수익 창출이 가능합니다.</li>
+                            </ul>
+                            <p>아래 매물들은 이러한 조건을 기반으로 선별되었으며, 특히 상위 3개 매물은 위치, 면적, 임대 조건이 모두 요청 사항과 90% 이상 일치합니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="ai-property-list">
+                        <!-- 매물 1 -->
+                        <div class="ai-property-item">
+                            <div class="property-rank">
+                                <span class="rank-number">1</span>
+                                <div class="match-score">
+                                    <span class="score">96%</span>
+                                    <span class="match-text">일치</span>
+                                </div>
+                            </div>
+                            <div class="property-image">
+                                <img src="assets/property1.jpg" alt="매물 이미지">
+                                <span class="property-badge">추천</span>
+                            </div>
+                            <div class="property-details">
+                                <h4>강남대로 123 상가 2층</h4>
+                                <div class="property-meta">
+                                    <span><i class="fas fa-expand-alt"></i> 28평 (전용 22평)</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> 강남역 3번 출구 도보 3분</span>
+                                    <span><i class="fas fa-won-sign"></i> 보증금 5,000만원</span>
+                                    <span><i class="fas fa-money-bill-wave"></i> 월세 450만원</span>
+                                </div>
+                                <div class="property-match-points">
+                                    <h5>매칭 포인트</h5>
+                                    <div class="match-points">
+                                        <span class="match-point"><i class="fas fa-check"></i> 위치 정확도: 강남역 5분 이내 (요청 조건 일치)</span>
+                                        <span class="match-point"><i class="fas fa-check"></i> 면적: 28평으로 요청 범위(20-30평) 내에 해당</span>
+                                        <span class="match-point"><i class="fas fa-check"></i> 유동인구 지수: 92점 (상위 10% 수준)</span>
+                                        <span class="match-point"><i class="fas fa-check"></i> 주변 오피스 밀집도: 높음 (요청 조건 일치)</span>
+                                    </div>
+                                </div>
+                                <div class="property-actions">
+                                    <button class="btn-outline btn-favorite"><i class="far fa-heart"></i> 관심 추가</button>
+                                    <button class="btn-outline btn-tour"><i class="fas fa-calendar-alt"></i> 투어 예약</button>
+                                    <button class="btn-primary btn-detail"><i class="fas fa-search"></i> 상세보기</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 매물 2 -->
+                        <div class="ai-property-item">
+                            <div class="property-rank">
+                                <span class="rank-number">2</span>
+                                <div class="match-score">
+                                    <span class="score">93%</span>
+                                    <span class="match-text">일치</span>
+                                </div>
+                            </div>
+                            <div class="property-image">
+                                <img src="assets/property2.jpg" alt="매물 이미지">
+                            </div>
+                            <div class="property-details">
+                                <h4>테헤란로 456 오피스텔 1층</h4>
+                                <div class="property-meta">
+                                    <span><i class="fas fa-expand-alt"></i> 25평 (전용 20평)</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> 강남역 2번 출구 도보 6분</span>
+                                    <span><i class="fas fa-won-sign"></i> 보증금 6,000만원</span>
+                                    <span><i class="fas fa-money-bill-wave"></i> 월세 480만원</span>
+                                </div>
+                                <div class="property-match-points">
+                                    <h5>매칭 포인트</h5>
+                                    <div class="match-points">
+                                        <span class="match-point"><i class="fas fa-check"></i> 위치: 강남역 6분 거리 (요청 조건과 약간 차이)</span>
+                                        <span class="match-point"><i class="fas fa-check"></i> 면적: 25평으로 요청 범위 내에 적합</span>
+                                        <span class="match-point"><i class="fas fa-check"></i> 오피스 밀집도: 매우 높음 (요청 조건 일치)</span>
+                                        <span class="match-point"><i class="fas fa-times"></i> 월세: 480만원으로 요청 범위(500만원 이하)보다 약간 낮음</span>
+                                    </div>
+                                </div>
+                                <div class="property-actions">
+                                    <button class="btn-outline btn-favorite"><i class="far fa-heart"></i> 관심 추가</button>
+                                    <button class="btn-outline btn-tour"><i class="fas fa-calendar-alt"></i> 투어 예약</button>
+                                    <button class="btn-primary btn-detail"><i class="fas fa-search"></i> 상세보기</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 매물 3 -->
+                        <div class="ai-property-item">
+                            <div class="property-rank">
+                                <span class="rank-number">3</span>
+                                <div class="match-score">
+                                    <span class="score">89%</span>
+                                    <span class="match-text">일치</span>
+                                </div>
+                            </div>
+                            <div class="property-image">
+                                <img src="assets/property3.jpg" alt="매물 이미지">
+                            </div>
+                            <div class="property-details">
+                                <h4>강남대로 78길 상가 1층</h4>
+                                <div class="property-meta">
+                                    <span><i class="fas fa-expand-alt"></i> 31평 (전용 26평)</span>
+                                    <span><i class="fas fa-map-marker-alt"></i> 강남역 4번 출구 도보 4분</span>
+                                    <span><i class="fas fa-won-sign"></i> 보증금 8,000만원</span>
+                                    <span><i class="fas fa-money-bill-wave"></i> 월세 520만원</span>
+                                </div>
+                                <div class="property-match-points">
+                                    <h5>매칭 포인트</h5>
+                                    <div class="match-points">
+                                        <span class="match-point"><i class="fas fa-check"></i> 위치: 강남역 4분 거리 (요청 조건 일치)</span>
+                                        <span class="match-point"><i class="fas fa-times"></i> 면적: 31평으로 요청 범위보다 약간 큼</span>
+                                        <span class="match-point"><i class="fas fa-check"></i> 유동인구 지수: 88점 (상위 15% 수준)</span>
+                                        <span class="match-point"><i class="fas fa-times"></i> 월세: 520만원으로 요청 범위 초과</span>
+                                    </div>
+                                </div>
+                                <div class="property-actions">
+                                    <button class="btn-outline btn-favorite"><i class="far fa-heart"></i> 관심 추가</button>
+                                    <button class="btn-outline btn-tour"><i class="fas fa-calendar-alt"></i> 투어 예약</button>
+                                    <button class="btn-primary btn-detail"><i class="fas fa-search"></i> 상세보기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="more-results">
+                        <button class="btn-show-more"><i class="fas fa-plus"></i> 더 많은 매물 보기 (5개 더)</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/franchise-ai-matching.js"></script>
+</body>
+</html>

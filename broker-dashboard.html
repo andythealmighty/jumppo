@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부동산 중개사 대시보드 - AI 점포데이터 거래소</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/broker-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+    /* 사이드바 링크 클릭 문제 해결을 위한 스타일 오버라이드 */
+    .sidebar {
+        pointer-events: auto !important;
+    }
+    .sidebar ul {
+        pointer-events: auto !important;
+    }
+    .sidebar ul li {
+        pointer-events: auto !important;
+    }
+    .sidebar ul li a {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+        z-index: 100 !important;
+        position: relative !important;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>AI 점포데이터 거래소</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="franchise-dashboard.html">프랜차이즈 대시보드</a></li>
+                    <li><a href="broker-dashboard.html" class="active">부동산 중개사 대시보드</a></li>
+                    <li><a href="#" class="user-profile">김중개님 <i class="fas fa-user-circle"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="broker-dashboard.html" class="active"><i class="fas fa-tachometer-alt"></i> 대시보드</a></li>
+                <li><a href="broker-property-management.html"><i class="fas fa-building"></i> 매물 관리</a></li>
+                <li><a href="broker-franchise-cards.html"><i class="fas fa-search"></i> 프랜차이즈 조건 카드</a></li>
+                <li><a href="broker-chat.html"><i class="fas fa-comment-alt"></i> 채팅 관리</a></li>
+                <li><a href="broker-tours.html"><i class="fas fa-calendar-alt"></i> 투어 일정</a></li>
+                <li><a href="broker-contracts.html"><i class="fas fa-file-contract"></i> 계약 관리</a></li>
+                <li><a href="broker-analytics.html"><i class="fas fa-chart-bar"></i> 성과 분석</a></li>
+                <li><a href="broker-settings.html"><i class="fas fa-cog"></i> 설정</a></li>
+            </ul>
+        </aside>
+
+        <main class="dashboard-content">
+            <div class="dashboard-header">
+                <h2>부동산 중개사 대시보드</h2>
+                <div class="date-filter">
+                    <label for="date-range">기간:</label>
+                    <select id="date-range">
+                        <option>최근 30일</option>
+                        <option>최근 3개월</option>
+                        <option>최근 6개월</option>
+                        <option>올해</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>등록 매물</h3>
+                        <p class="stat-number">28</p>
+                        <p class="stat-change positive">+4% <i class="fas fa-arrow-up"></i></p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>매물 조회수</h3>
+                        <p class="stat-number">324</p>
+                        <p class="stat-change positive">+15% <i class="fas fa-arrow-up"></i></p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>투어 완료</h3>
+                        <p class="stat-number">12</p>
+                        <p class="stat-change positive">+20% <i class="fas fa-arrow-up"></i></p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>계약 체결</h3>
+                        <p class="stat-number">5</p>
+                        <p class="stat-change positive">+25% <i class="fas fa-arrow-up"></i></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-row">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>매물 품질 점수</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="property-quality">
+                            <div class="quality-chart">
+                                <div class="chart-circle">
+                                    <div class="chart-percentage">78%</div>
+                                </div>
+                                <div class="chart-label">전체 평균 품질 점수</div>
+                            </div>
+                            <div class="quality-details">
+                                <div class="quality-item">
+                                    <div class="quality-info">
+                                        <span class="quality-label">사진 품질</span>
+                                        <span class="quality-value">85%</span>
+                                    </div>
+                                    <div class="quality-bar">
+                                        <div class="quality-progress" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="quality-item">
+                                    <div class="quality-info">
+                                        <span class="quality-label">정보 완성도</span>
+                                        <span class="quality-value">92%</span>
+                                    </div>
+                                    <div class="quality-bar">
+                                        <div class="quality-progress" style="width: 92%"></div>
+                                    </div>
+                                </div>
+                                <div class="quality-item">
+                                    <div class="quality-info">
+                                        <span class="quality-label">가격 투명성</span>
+                                        <span class="quality-value">70%</span>
+                                    </div>
+                                    <div class="quality-bar">
+                                        <div class="quality-progress" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="quality-item">
+                                    <div class="quality-info">
+                                        <span class="quality-label">응답 속도</span>
+                                        <span class="quality-value">65%</span>
+                                    </div>
+                                    <div class="quality-bar">
+                                        <div class="quality-progress" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>프랜차이즈 관심 추이</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="franchise-interest">
+                            <div class="interest-chart">
+                                <!-- 차트가 표시될 위치 -->
+                                <div class="chart-placeholder">
+                                    <img src="assets/interest-chart.png" alt="관심 추이 차트">
+                                </div>
+                            </div>
+                            <div class="top-interested">
+                                <h4>가장 관심 많은 프랜차이즈</h4>
+                                <ul>
+                                    <li>
+                                        <span class="franchise-name">스타벅스</span>
+                                        <span class="interest-count">15</span>
+                                    </li>
+                                    <li>
+                                        <span class="franchise-name">BBQ 치킨</span>
+                                        <span class="interest-count">12</span>
+                                    </li>
+                                    <li>
+                                        <span class="franchise-name">CU</span>
+                                        <span class="interest-count">10</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-row">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>최근 관심 받은 매물</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="popular-properties">
+                            <div class="property-item">
+                                <div class="property-image">
+                                    <img src="assets/property1.jpg" alt="매물 이미지">
+                                </div>
+                                <div class="property-info">
+                                    <h4>강남대로 123 상가 2층</h4>
+                                    <div class="property-details">
+                                        <span><i class="fas fa-expand-alt"></i> 32평</span>
+                                        <span><i class="fas fa-won-sign"></i> 월세 450만원</span>
+                                    </div>
+                                    <div class="property-stats">
+                                        <span><i class="fas fa-eye"></i> 78회 조회</span>
+                                        <span><i class="fas fa-heart"></i> 12회 관심</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="property-item">
+                                <div class="property-image">
+                                    <img src="assets/property2.jpg" alt="매물 이미지">
+                                </div>
+                                <div class="property-info">
+                                    <h4>테헤란로 456 오피스텔 3층</h4>
+                                    <div class="property-details">
+                                        <span><i class="fas fa-expand-alt"></i> 45평</span>
+                                        <span><i class="fas fa-won-sign"></i> 월세 580만원</span>
+                                    </div>
+                                    <div class="property-stats">
+                                        <span><i class="fas fa-eye"></i> 65회 조회</span>
+                                        <span><i class="fas fa-heart"></i> 8회 관심</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="property-item">
+                                <div class="property-image">
+                                    <img src="assets/property3.jpg" alt="매물 이미지">
+                                </div>
+                                <div class="property-info">
+                                    <h4>홍대입구역 5번 출구 상가</h4>
+                                    <div class="property-details">
+                                        <span><i class="fas fa-expand-alt"></i> 28평</span>
+                                        <span><i class="fas fa-won-sign"></i> 월세 380만원</span>
+                                    </div>
+                                    <div class="property-stats">
+                                        <span><i class="fas fa-eye"></i> 52회 조회</span>
+                                        <span><i class="fas fa-heart"></i> 7회 관심</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>투어 일정</h3>
+                        <a href="broker-tours.html" class="view-all">전체보기</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="upcoming-tours">
+                            <div class="tour-item">
+                                <div class="tour-date">
+                                    <div class="date-day">18</div>
+                                    <div class="date-month">6월</div>
+                                </div>
+                                <div class="tour-info">
+                                    <h4>강남대로 123 상가 2층</h4>
+                                    <p><i class="fas fa-user"></i> 이프랜님 (스타벅스)</p>
+                                    <p><i class="fas fa-clock"></i> 오후 2:00 - 3:00</p>
+                                </div>
+                                <div class="tour-actions">
+                                    <button class="btn-outline">일정변경</button>
+                                </div>
+                            </div>
+                            
+                            <div class="tour-item">
+                                <div class="tour-date">
+                                    <div class="date-day">20</div>
+                                    <div class="date-month">6월</div>
+                                </div>
+                                <div class="tour-info">
+                                    <h4>테헤란로 456 오피스텔 3층</h4>
+                                    <p><i class="fas fa-user"></i> 김창업님 (이디야)</p>
+                                    <p><i class="fas fa-clock"></i> 오전 11:00 - 12:00</p>
+                                </div>
+                                <div class="tour-actions">
+                                    <button class="btn-outline">일정변경</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-row">
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>프랜차이즈 관심 카드</h3>
+                        <a href="broker-franchise-cards.html" class="view-all">전체보기</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="franchise-cards">
+                            <div class="franchise-card">
+                                <div class="franchise-logo">
+                                    <img src="assets/franchise1.jpg" alt="프랜차이즈 로고">
+                                </div>
+                                <div class="franchise-info">
+                                    <h4>스타벅스 코리아</h4>
+                                    <div class="franchise-requirements">
+                                        <span class="franchise-tag">100~150평</span>
+                                        <span class="franchise-tag">1층 코너</span>
+                                        <span class="franchise-tag">주차 10대 이상</span>
+                                    </div>
+                                    <div class="franchise-areas">
+                                        <span>관심지역: 강남, 홍대, 분당</span>
+                                    </div>
+                                </div>
+                                <div class="franchise-action">
+                                    <button class="btn-primary">매물 제안</button>
+                                </div>
+                            </div>
+                            
+                            <div class="franchise-card">
+                                <div class="franchise-logo">
+                                    <img src="assets/franchise2.jpg" alt="프랜차이즈 로고">
+                                </div>
+                                <div class="franchise-info">
+                                    <h4>이디야 커피</h4>
+                                    <div class="franchise-requirements">
+                                        <span class="franchise-tag">30~70평</span>
+                                        <span class="franchise-tag">역세권 5분</span>
+                                        <span class="franchise-tag">유동인구 높음</span>
+                                    </div>
+                                    <div class="franchise-areas">
+                                        <span>관심지역: 신림, 사당, 노원</span>
+                                    </div>
+                                </div>
+                                <div class="franchise-action">
+                                    <button class="btn-primary">매물 제안</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/broker-dashboard.js"></script>
+    <script>
+    // CSS 충돌 문제 해결을 위한 스크립트
+    document.addEventListener('DOMContentLoaded', function() {
+        // 사이드바와 링크에 인라인 스타일 직접 적용
+        const sidebar = document.querySelector('.sidebar');
+        const sidebarLinks = document.querySelectorAll('.sidebar ul li a');
+        
+        if (sidebar) {
+            sidebar.setAttribute('style', 'pointer-events: auto !important;');
+        }
+        
+        sidebarLinks.forEach(link => {
+            link.setAttribute('style', 'pointer-events: auto !important; cursor: pointer !important; z-index: 100 !important;');
+            
+            // 링크 클릭 시 상호작용 확인을 위한 이벤트 추가
+            link.addEventListener('click', function() {
+                alert('링크가 클릭되었습니다: ' + this.textContent);
+            });
+        });
+    });
+    </script>
+</body>
+</html>

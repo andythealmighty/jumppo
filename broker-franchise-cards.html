@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프랜차이즈 조건 카드 - 부동산 중개사 대시보드</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/broker-styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>AI 점포데이터 거래소</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="franchise-dashboard.html">프랜차이즈 대시보드</a></li>
+                    <li><a href="broker-dashboard.html" class="active">부동산 중개사 대시보드</a></li>
+                    <li><a href="#" class="user-profile">김중개님 <i class="fas fa-user-circle"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="broker-dashboard.html"><i class="fas fa-tachometer-alt"></i> 대시보드</a></li>
+                <li><a href="broker-property-management.html"><i class="fas fa-building"></i> 매물 관리</a></li>
+                <li><a href="broker-franchise-cards.html" class="active"><i class="fas fa-search"></i> 프랜차이즈 조건 카드</a></li>
+                <li><a href="broker-chat.html"><i class="fas fa-comment-alt"></i> 채팅 관리</a></li>
+                <li><a href="broker-tours.html"><i class="fas fa-calendar-alt"></i> 투어 일정</a></li>
+                <li><a href="broker-contracts.html"><i class="fas fa-file-contract"></i> 계약 관리</a></li>
+                <li><a href="broker-analytics.html"><i class="fas fa-chart-bar"></i> 성과 분석</a></li>
+                <li><a href="broker-settings.html"><i class="fas fa-cog"></i> 설정</a></li>
+            </ul>
+        </aside>
+
+        <main class="dashboard-content">
+            <div class="page-header">
+                <h2>프랜차이즈 조건 카드</h2>
+                <p>프랜차이즈 브랜드들이 찾고 있는 매물 조건을 확인하고 매칭해보세요.</p>
+            </div>
+
+            <div class="franchise-filter-section">
+                <div class="filter-container">
+                    <div class="filter-row">
+                        <div class="search-input">
+                            <input type="text" placeholder="프랜차이즈명, 업종 검색" class="form-input">
+                            <button class="btn-search"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="filter-selects">
+                            <select class="form-select">
+                                <option>모든 업종</option>
+                                <option>카페/베이커리</option>
+                                <option>음식점</option>
+                                <option>편의점</option>
+                                <option>패션/의류</option>
+                                <option>기타</option>
+                            </select>
+                            <select class="form-select">
+                                <option>모든 지역</option>
+                                <option>서울</option>
+                                <option>경기</option>
+                                <option>인천</option>
+                                <option>부산</option>
+                            </select>
+                            <select class="form-select">
+                                <option>정렬: 매칭 가능성순</option>
+                                <option>정렬: 최신순</option>
+                                <option>정렬: 인기순</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="franchise-cards-section">
+                <div class="franchise-cards-grid">
+                    <!-- 프랜차이즈 조건 카드 -->
+                    <div class="franchise-condition-card">
+                        <div class="franchise-logo">
+                            <img src="assets/franchise1.jpg" alt="스타벅스">
+                        </div>
+                        <div class="franchise-header">
+                            <h3>스타벅스</h3>
+                            <div class="franchise-category">카페/베이커리</div>
+                        </div>
+                        <div class="franchise-conditions">
+                            <div class="condition-item">
+                                <span class="condition-label">희망 지역</span>
+                                <span class="condition-value">서울, 경기, 부산</span>
+                            </div>
+                            <div class="condition-item">
+                                <span class="condition-label">면적</span>
+                                <span class="condition-value">80-120평</span>
+                            </div>
+                            <div class="condition-item">
+                                <span class="condition-label">층수</span>
+                                <span class="condition-value">1-2층</span>
+                            </div>
+                            <div class="condition-item">
+                                <span class="condition-label">임대료</span>
+                                <span class="condition-value">~1000만원/월</span>
+                            </div>
+                        </div>
+                        <div class="franchise-tags">
+                            <span class="franchise-tag">유동인구 많음</span>
+                            <span class="franchise-tag">코너/가각부지</span>
+                            <span class="franchise-tag">대로변</span>
+                            <span class="franchise-tag">주차가능</span>
+                        </div>
+                        <div class="franchise-actions">
+                            <button class="btn-primary match-property"><i class="fas fa-handshake"></i> 매물 제안</button>
+                            <button class="btn-outline view-detail"><i class="fas fa-info-circle"></i> 상세보기</button>
+                        </div>
+                    </div>
+
+                    <!-- 추가 프랜차이즈 조건 카드 -->
+                    <div class="franchise-condition-card">
+                        <div class="franchise-logo">
+                            <img src="assets/franchise2.jpg" alt="BBQ 치킨">
+                        </div>
+                        <div class="franchise-header">
+                            <h3>BBQ 치킨</h3>
+                            <div class="franchise-category">음식점</div>
+                        </div>
+                        <div class="franchise-conditions">
+                            <div class="condition-item">
+                                <span class="condition-label">희망 지역</span>
+                                <span class="condition-value">서울, 경기, 전국</span>
+                            </div>
+                            <div class="condition-item">
+                                <span class="condition-label">면적</span>
+                                <span class="condition-value">20-40평</span>
+                            </div>
+                            <div class="condition-item">
+                                <span class="condition-label">층수</span>
+                                <span class="condition-value">1층, 지하1층</span>
+                            </div>
+                            <div class="condition-item">
+                                <span class="condition-label">임대료</span>
+                                <span class="condition-value">~300만원/월</span>
+                            </div>
+                        </div>
+                        <div class="franchise-tags">
+                            <span class="franchise-tag">주거 밀집</span>
+                            <span class="franchise-tag">배달 용이</span>
+                            <span class="franchise-tag">주차가능</span>
+                        </div>
+                        <div class="franchise-actions">
+                            <button class="btn-primary match-property"><i class="fas fa-handshake"></i> 매물 제안</button>
+                            <button class="btn-outline view-detail"><i class="fas fa-info-circle"></i> 상세보기</button>
+                        </div>
+                    </div>
+
+                    <!-- 추가 프랜차이즈 조건 카드 -->
+                    <!-- 더 많은 카드를 같은 형태로 추가 -->
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">4</button>
+                <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </main>
+    </div>
+
+    <!-- 매물 제안 모달 -->
+    <div class="modal" id="match-property-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>매물 제안하기 - 스타벅스</h3>
+                <button class="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="match-property-form">
+                    <div class="form-group">
+                        <label for="select-property">제안할 매물 선택</label>
+                        <select id="select-property" class="form-select">
+                            <option value="">매물을 선택하세요</option>
+                            <option>강남대로 123 상가 2층</option>
+                            <option>테헤란로 456 오피스텔 3층</option>
+                            <option>홍대입구역 5번 출구 상가</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="match-message">제안 메시지</label>
+                        <textarea id="match-message" class="form-textarea" placeholder="프랜차이즈 담당자에게 전달할 메시지를 입력하세요"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>매칭 점수</label>
+                        <div class="match-score-display">
+                            <div class="match-score">87%</div>
+                            <div class="match-details">
+                                <p>이 매물은 스타벅스의 조건과 87% 일치합니다.</p>
+                                <div class="match-criteria">
+                                    <div class="match-criterion">
+                                        <div class="criterion-label">위치</div>
+                                        <div class="criterion-progress">
+                                            <div class="progress-bar" style="width: 90%"></div>
+                                        </div>
+                                        <div class="criterion-value">90%</div>
+                                    </div>
+                                    <div class="match-criterion">
+                                        <div class="criterion-label">면적</div>
+                                        <div class="criterion-progress">
+                                            <div class="progress-bar" style="width: 85%"></div>
+                                        </div>
+                                        <div class="criterion-value">85%</div>
+                                    </div>
+                                    <div class="match-criterion">
+                                        <div class="criterion-label">임대료</div>
+                                        <div class="criterion-progress">
+                                            <div class="progress-bar" style="width: 75%"></div>
+                                        </div>
+                                        <div class="criterion-value">75%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-outline cancel-match">취소</button>
+                        <button type="submit" class="btn-primary">제안 보내기</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/broker-franchise-cards.js"></script>
+</body>
+</html>

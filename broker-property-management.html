@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매물 관리 - 부동산 중개사 대시보드</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/broker-styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>AI 점포데이터 거래소</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="franchise-dashboard.html">프랜차이즈 대시보드</a></li>
+                    <li><a href="broker-dashboard.html" class="active">부동산 중개사 대시보드</a></li>
+                    <li><a href="#" class="user-profile">김중개님 <i class="fas fa-user-circle"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="broker-dashboard.html"><i class="fas fa-tachometer-alt"></i> 대시보드</a></li>
+                <li><a href="broker-property-management.html" class="active"><i class="fas fa-building"></i> 매물 관리</a></li>
+                <li><a href="broker-franchise-cards.html"><i class="fas fa-search"></i> 프랜차이즈 조건 카드</a></li>
+                <li><a href="broker-chat.html"><i class="fas fa-comment-alt"></i> 채팅 관리</a></li>
+                <li><a href="broker-tours.html"><i class="fas fa-calendar-alt"></i> 투어 일정</a></li>
+                <li><a href="broker-contracts.html"><i class="fas fa-file-contract"></i> 계약 관리</a></li>
+                <li><a href="broker-analytics.html"><i class="fas fa-chart-bar"></i> 성과 분석</a></li>
+                <li><a href="broker-settings.html"><i class="fas fa-cog"></i> 설정</a></li>
+            </ul>
+        </aside>
+
+        <main class="dashboard-content">
+            <div class="page-header">
+                <h2>매물 관리</h2>
+                <p>등록한 매물을 관리하고 새로운 매물을 추가하세요.</p>
+                <button class="btn-primary" id="btn-add-property"><i class="fas fa-plus"></i> 새 매물 등록</button>
+            </div>
+
+            <div class="property-filter-section">
+                <div class="filter-container">
+                    <div class="filter-row">
+                        <div class="search-input">
+                            <input type="text" placeholder="매물 주소, 키워드 검색" class="form-input">
+                            <button class="btn-search"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="filter-selects">
+                            <select class="form-select">
+                                <option>모든 유형</option>
+                                <option>상가/점포</option>
+                                <option>사무실</option>
+                                <option>건물 전체</option>
+                            </select>
+                            <select class="form-select">
+                                <option>모든 상태</option>
+                                <option>활성화</option>
+                                <option>비활성화</option>
+                                <option>검토중</option>
+                            </select>
+                            <select class="form-select">
+                                <option>정렬: 최신순</option>
+                                <option>정렬: 관심도순</option>
+                                <option>정렬: 매칭률순</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="property-list-section">
+                <div class="property-list">
+                    <!-- 매물 항목 -->
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="assets/property1.jpg" alt="강남대로 123 상가">
+                            <div class="property-badge high-score">90점</div>
+                            <div class="property-matches">7개 프랜차이즈 매칭</div>
+                        </div>
+                        <div class="property-content">
+                            <div class="property-status active">활성화</div>
+                            <h4>강남대로 123 상가 2층</h4>
+                            <div class="property-meta">
+                                <span><i class="fas fa-expand-alt"></i> 32평</span>
+                                <span><i class="fas fa-won-sign"></i> 월세 450만원</span>
+                                <span><i class="fas fa-map-marker-alt"></i> 서울 강남구</span>
+                            </div>
+                            <div class="property-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">78</span>
+                                    <span class="stat-label">조회</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">12</span>
+                                    <span class="stat-label">관심</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-value">5</span>
+                                    <span class="stat-label">투어</span>
+                                </div>
+                            </div>
+                            <div class="property-actions">
+                                <button class="btn-outline"><i class="fas fa-edit"></i> 수정</button>
+                                <button class="btn-outline"><i class="fas fa-chart-line"></i> 성과</button>
+                                <button class="btn-primary"><i class="fas fa-users"></i> 매칭 확인</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 매물 항목 추가 -->
+                    <!-- 추가 매물 카드를 여기에 동일한 형식으로 추가 -->
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">4</button>
+                <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </main>
+    </div>
+
+    <!-- 매물 등록 모달 -->
+    <div class="modal" id="property-modal">
+        <div class="modal-content large-modal">
+            <div class="modal-header">
+                <h3>새 매물 등록</h3>
+                <button class="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="property-form">
+                    <div class="form-section">
+                        <h4>기본 정보</h4>
+                        <div class="form-group">
+                            <label for="property-title">매물 제목</label>
+                            <input type="text" id="property-title" class="form-input" placeholder="예: 강남역 인근 1층 상가">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="property-type">매물 유형</label>
+                                <select id="property-type" class="form-select">
+                                    <option>상가/점포</option>
+                                    <option>사무실</option>
+                                    <option>건물 전체</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="property-floor">층수</label>
+                                <select id="property-floor" class="form-select">
+                                    <option>지하 1층</option>
+                                    <option>1층</option>
+                                    <option>2층</option>
+                                    <option>3층 이상</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>위치 정보</h4>
+                        <div class="form-group">
+                            <label for="property-address">주소</label>
+                            <input type="text" id="property-address" class="form-input" placeholder="주소 검색">
+                            <button type="button" class="btn-outline btn-address-search">주소 검색</button>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="property-area">면적</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="property-area" class="form-input" placeholder="면적">
+                                    <span class="input-unit">평</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="property-rent">임대료</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="property-rent" class="form-input" placeholder="월세">
+                                    <span class="input-unit">만원</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>상세 정보</h4>
+                        <div class="form-group">
+                            <label for="property-description">매물 설명</label>
+                            <textarea id="property-description" class="form-textarea" placeholder="매물에 대한 상세 설명을 입력하세요"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>주변 시설</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 지하철역
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 버스 정류장
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 주차장
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 대형 상업시설
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 주거 밀집 지역
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 오피스 밀집 지역
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>이미지 업로드</h4>
+                        <div class="form-group">
+                            <div class="image-uploader">
+                                <div class="upload-area">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>이미지를 드래그하거나 클릭하여 업로드</p>
+                                    <input type="file" multiple hidden>
+                                </div>
+                                <div class="upload-preview">
+                                    <!-- 이미지 프리뷰가 여기에 표시됩니다 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-outline cancel-property">취소</button>
+                        <button type="submit" class="btn-primary">매물 등록</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/broker-property-management.js"></script>
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매물 검색 - AI 점포데이터 거래소</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>AI 점포데이터 거래소</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="franchise-dashboard.html">프랜차이즈 대시보드</a></li>
+                    <li><a href="broker-dashboard.html">부동산 중개사 대시보드</a></li>
+                    <li><a href="#" class="user-profile">홍길동님 <i class="fas fa-user-circle"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="franchise-dashboard.html"><i class="fas fa-tachometer-alt"></i> 대시보드</a></li>
+                <li><a href="franchise-search.html" class="active"><i class="fas fa-search"></i> 매물 검색</a></li>
+                <li><a href="franchise-ai-matching.html"><i class="fas fa-magic"></i> AI 매칭</a></li>
+                <li><a href="franchise-conditions.html"><i class="fas fa-building"></i> 조건 카드 관리</a></li>
+                <li><a href="franchise-tours.html"><i class="fas fa-calendar-alt"></i> 투어 일정</a></li>
+                <li><a href="franchise-contracts.html"><i class="fas fa-file-contract"></i> 계약 관리</a></li>
+                <li><a href="franchise-analytics.html"><i class="fas fa-chart-bar"></i> 데이터 분석</a></li>
+                <li><a href="franchise-settings.html"><i class="fas fa-cog"></i> 설정</a></li>
+            </ul>
+        </aside>
+
+        <main class="dashboard-content">
+            <div class="page-header">
+                <h2>매물 검색</h2>
+                <p>조건에 맞는 최적의 매물을 찾아보세요</p>
+            </div>
+
+            <!-- 고급 필터 검색 섹션 -->
+            <section class="advanced-search-section">
+                <div class="search-container">
+                    <div class="filter-form">
+                        <div class="filter-section">
+                            <h3>지역 설정</h3>
+                            <div class="filter-grid">
+                                <div class="filter-group">
+                                    <label>시/도</label>
+                                    <select class="filter-select">
+                                        <option>서울특별시</option>
+                                        <option>경기도</option>
+                                        <option>인천광역시</option>
+                                        <option>부산광역시</option>
+                                        <option>대구광역시</option>
+                                        <option>광주광역시</option>
+                                        <option>대전광역시</option>
+                                        <option>울산광역시</option>
+                                        <option>세종특별자치시</option>
+                                    </select>
+                                </div>
+                                <div class="filter-group">
+                                    <label>시/군/구</label>
+                                    <select class="filter-select">
+                                        <option>강남구</option>
+                                        <option>서초구</option>
+                                        <option>송파구</option>
+                                        <option>마포구</option>
+                                        <option>용산구</option>
+                                        <option>중구</option>
+                                        <option>종로구</option>
+                                    </select>
+                                </div>
+                                <div class="filter-group">
+                                    <label>동/읍/면</label>
+                                    <select class="filter-select">
+                                        <option>전체</option>
+                                        <option>역삼동</option>
+                                        <option>논현동</option>
+                                        <option>삼성동</option>
+                                        <option>청담동</option>
+                                        <option>대치동</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="filter-option">
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 지하철역 인근만 보기
+                                </label>
+                                <div class="subway-options">
+                                    <select class="filter-select">
+                                        <option>강남역</option>
+                                        <option>역삼역</option>
+                                        <option>선릉역</option>
+                                        <option>삼성역</option>
+                                        <option>압구정역</option>
+                                    </select>
+                                    <select class="filter-select">
+                                        <option>500m 이내</option>
+                                        <option>1km 이내</option>
+                                        <option>1.5km 이내</option>
+                                        <option>2km 이내</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-section">
+                            <h3>물건 정보</h3>
+                            <div class="filter-grid">
+                                <div class="filter-group">
+                                    <label>면적 (전용)</label>
+                                    <div class="range-input">
+                                        <input type="number" placeholder="최소" class="filter-input">
+                                        <span>~</span>
+                                        <input type="number" placeholder="최대" class="filter-input">
+                                        <span>평</span>
+                                    </div>
+                                </div>
+                                <div class="filter-group">
+                                    <label>층수</label>
+                                    <div class="checkbox-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox"> 지하
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" checked> 1층
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox"> 2층
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox"> 3층 이상
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filter-group">
+                                    <label>업종</label>
+                                    <div class="checkbox-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" checked> 카페
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox"> 레스토랑
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox"> 소매점
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox"> 뷰티
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox"> 헬스/피트니스
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox"> 교육
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-section">
+                            <h3>임대 조건</h3>
+                            <div class="filter-grid">
+                                <div class="filter-group">
+                                    <label>보증금</label>
+                                    <div class="range-input">
+                                        <input type="number" placeholder="최소" class="filter-input">
+                                        <span>~</span>
+                                        <input type="number" placeholder="최대" class="filter-input">
+                                        <span>만원</span>
+                                    </div>
+                                </div>
+                                <div class="filter-group">
+                                    <label>월세</label>
+                                    <div class="range-input">
+                                        <input type="number" placeholder="최소" class="filter-input">
+                                        <span>~</span>
+                                        <input type="number" placeholder="최대" class="filter-input">
+                                        <span>만원</span>
+                                    </div>
+                                </div>
+                                <div class="filter-group">
+                                    <label>권리금</label>
+                                    <div class="range-input">
+                                        <input type="number" placeholder="최소" class="filter-input">
+                                        <span>~</span>
+                                        <input type="number" placeholder="최대" class="filter-input">
+                                        <span>만원</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-section">
+                            <h3>특이사항</h3>
+                            <div class="checkbox-group special-options">
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 코너 물건
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 인테리어 포함
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 집객시설 인근
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 주차 가능
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 테라스 사용 가능
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 24시간 영업 가능
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 신축건물
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox"> 층고 높음
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-actions">
+                            <button class="btn-outline btn-reset"><i class="fas fa-undo"></i> 초기화</button>
+                            <button class="btn-outline btn-save"><i class="fas fa-save"></i> 조건 저장</button>
+                            <button class="btn-primary btn-search"><i class="fas fa-search"></i> 검색</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 검색 결과 표시 섹션 -->
+            <section class="search-results-content">
+                <div class="results-header">
+                    <h3>검색 결과 <span class="results-count">37</span>건</h3>
+                    <div class="results-actions">
+                        <div class="view-options">
+                            <button class="view-option active" data-view="grid"><i class="fas fa-th"></i></button>
+                            <button class="view-option" data-view="list"><i class="fas fa-list"></i></button>
+                            <button class="view-option" data-view="map"><i class="fas fa-map-marked-alt"></i></button>
+                        </div>
+                        <div class="sort-options">
+                            <select class="results-sort">
+                                <option>매칭점수 높은순</option>
+                                <option>가격 낮은순</option>
+                                <option>면적 넓은순</option>
+                                <option>등록일 최신순</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 그리드 뷰 결과 -->
+                <div class="results-view grid-view active">
+                    <div class="property-grid">
+                        <!-- 매물 카드 1 -->
+                        <div class="property-card">
+                            <div class="property-score high-score">
+                                <span>94</span>
+                                <small>점</small>
+                            </div>
+                            <div class="property-image">
+                                <img src="assets/property1.jpg" alt="매물 이미지">
+                                <span class="property-badge">프리미엄</span>
+                                <div class="property-actions-overlay">
+                                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    <button class="btn-compare"><i class="fas fa-balance-scale"></i></button>
+                                </div>
+                            </div>
+                            <div class="property-content">
+                                <h4>강남대로 123 상가 2층</h4>
+                                <div class="property-meta">
+                                    <span><i class="fas fa-expand-alt"></i> 32평</span>
+                                    <span><i class="fas fa-won-sign"></i> 보증금 5000만원</span>
+                                    <span><i class="fas fa-money-bill-wave"></i> 월세 450만원</span>
+                                </div>
+                                <div class="property-tags">
+                                    <span class="property-tag">역세권</span>
+                                    <span class="property-tag">수익률 높음</span>
+                                </div>
+                                <div class="property-footer">
+                                    <span class="property-date">3일 전</span>
+                                    <a href="#" class="btn-view">상세보기</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 매물 카드 2 -->
+                        <div class="property-card">
+                            <div class="property-score medium-score">
+                                <span>83</span>
+                                <small>점</small>
+                            </div>
+                            <div class="property-image">
+                                <img src="assets/property2.jpg" alt="매물 이미지">
+                                <div class="property-actions-overlay">
+                                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    <button class="btn-compare"><i class="fas fa-balance-scale"></i></button>
+                                </div>
+                            </div>
+                            <div class="property-content">
+                                <h4>테헤란로 456 오피스텔 3층</h4>
+                                <div class="property-meta">
+                                    <span><i class="fas fa-expand-alt"></i> 45평</span>
+                                    <span><i class="fas fa-won-sign"></i> 보증금 7000만원</span>
+                                    <span><i class="fas fa-money-bill-wave"></i> 월세 580만원</span>
+                                </div>
+                                <div class="property-tags">
+                                    <span class="property-tag">오피스 밀집</span>
+                                    <span class="property-tag">층고 높음</span>
+                                </div>
+                                <div class="property-footer">
+                                    <span class="property-date">1주일 전</span>
+                                    <a href="#" class="btn-view">상세보기</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 매물 카드 3 -->
+                        <div class="property-card">
+                            <div class="property-score medium-score">
+                                <span>78</span>
+                                <small>점</small>
+                            </div>
+                            <div class="property-image">
+                                <img src="assets/property3.jpg" alt="매물 이미지">
+                                <div class="property-actions-overlay">
+                                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    <button class="btn-compare"><i class="fas fa-balance-scale"></i></button>
+                                </div>
+                            </div>
+                            <div class="property-content">
+                                <h4>선릉로 789 상가 1층</h4>
+                                <div class="property-meta">
+                                    <span><i class="fas fa-expand-alt"></i> 28평</span>
+                                    <span><i class="fas fa-won-sign"></i> 보증금 6000만원</span>
+                                    <span><i class="fas fa-money-bill-wave"></i> 월세 420만원</span>
+                                </div>
+                                <div class="property-tags">
+                                    <span class="property-tag">코너 자리</span>
+                                    <span class="property-tag">인테리어 우수</span>
+                                </div>
+                                <div class="property-footer">
+                                    <span class="property-date">2주일 전</span>
+                                    <a href="#" class="btn-view">상세보기</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 매물 카드 4 -->
+                        <div class="property-card">
+                            <div class="property-score low-score">
+                                <span>65</span>
+                                <small>점</small>
+                            </div>
+                            <div class="property-image">
+                                <img src="assets/property4.jpg" alt="매물 이미지">
+                                <div class="property-actions-overlay">
+                                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    <button class="btn-compare"><i class="fas fa-balance-scale"></i></button>
+                                </div>
+                            </div>
+                            <div class="property-content">
+                                <h4>신사동 가로수길 인근 상가</h4>
+                                <div class="property-meta">
+                                    <span><i class="fas fa-expand-alt"></i> 22평</span>
+                                    <span><i class="fas fa-won-sign"></i> 보증금 4000만원</span>
+                                    <span><i class="fas fa-money-bill-wave"></i> 월세 350만원</span>
+                                </div>
+                                <div class="property-tags">
+                                    <span class="property-tag">유동인구 많음</span>
+                                </div>
+                                <div class="property-footer">
+                                    <span class="property-date">3주일 전</span>
+                                    <a href="#" class="btn-view">상세보기</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 매물 카드 5 -->
+                        <div class="property-card">
+                            <div class="property-score medium-score">
+                                <span>76</span>
+                                <small>점</small>
+                            </div>
+                            <div class="property-image">
+                                <img src="assets/property5.jpg" alt="매물 이미지">
+                                <div class="property-actions-overlay">
+                                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    <button class="btn-compare"><i class="fas fa-balance-scale"></i></button>
+                                </div>
+                            </div>
+                            <div class="property-content">
+                                <h4>역삼동 IT타워 1층</h4>
+                                <div class="property-meta">
+                                    <span><i class="fas fa-expand-alt"></i> 38평</span>
+                                    <span><i class="fas fa-won-sign"></i> 보증금 8000만원</span>
+                                    <span><i class="fas fa-money-bill-wave"></i> 월세 520만원</span>
+                                </div>
+                                <div class="property-tags">
+                                    <span class="property-tag">오피스 밀집</span>
+                                    <span class="property-tag">신축</span>
+                                </div>
+                                <div class="property-footer">
+                                    <span class="property-date">1개월 전</span>
+                                    <a href="#" class="btn-view">상세보기</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 매물 카드 6 -->
+                        <div class="property-card">
+                            <div class="property-score high-score">
+                                <span>90</span>
+                                <small>점</small>
+                            </div>
+                            <div class="property-image">
+                                <img src="assets/property6.jpg" alt="매물 이미지">
+                                <span class="property-badge">프리미엄</span>
+                                <div class="property-actions-overlay">
+                                    <button class="btn-favorite"><i class="far fa-heart"></i></button>
+                                    <button class="btn-compare"><i class="fas fa-balance-scale"></i></button>
+                                </div>
+                            </div>
+                            <div class="property-content">
+                                <h4>삼성동 무역센터 인근 상가</h4>
+                                <div class="property-meta">
+                                    <span><i class="fas fa-expand-alt"></i> 42평</span>
+                                    <span><i class="fas fa-won-sign"></i> 보증금 1억원</span>
+                                    <span><i class="fas fa-money-bill-wave"></i> 월세 650만원</span>
+                                </div>
+                                <div class="property-tags">
+                                    <span class="property-tag">테라스</span>
+                                    <span class="property-tag">대로변</span>
+                                </div>
+                                <div class="property-footer">
+                                    <span class="property-date">오늘</span>
+                                    <a href="#" class="btn-view">상세보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pagination">
+                        <button class="page-btn"><i class="fas fa-chevron-left"></i></button>
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <button class="page-btn">4</button>
+                        <button class="page-btn">5</button>
+                        <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- 리스트 뷰 결과 -->
+                <div class="results-view list-view">
+                    <div class="property-list">
+                        <!-- 리스트 형태의 매물들 -->
+                    </div>
+                </div>
+
+                <!-- 지도 뷰 결과 -->
+                <div class="results-view map-view">
+                    <div class="map-container">
+                        <!-- 지도 표시 -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/franchise-search.js"></script>
+</body>
+</html>

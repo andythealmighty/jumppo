@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계약 관리 - AI 점포데이터 거래소</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>AI 점포데이터 거래소</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="franchise-dashboard.html">프랜차이즈 대시보드</a></li>
+                    <li><a href="broker-dashboard.html">부동산 중개사 대시보드</a></li>
+                    <li><a href="#" class="user-profile">홍길동님 <i class="fas fa-user-circle"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="franchise-dashboard.html"><i class="fas fa-tachometer-alt"></i> 대시보드</a></li>
+                <li><a href="franchise-search.html"><i class="fas fa-search"></i> 매물 검색</a></li>
+                <li><a href="franchise-ai-matching.html"><i class="fas fa-magic"></i> AI 매칭</a></li>
+                <li><a href="franchise-conditions.html"><i class="fas fa-building"></i> 조건 카드 관리</a></li>
+                <li><a href="franchise-tours.html"><i class="fas fa-calendar-alt"></i> 투어 일정</a></li>
+                <li><a href="franchise-contracts.html" class="active"><i class="fas fa-file-contract"></i> 계약 관리</a></li>
+                <li><a href="franchise-analytics.html"><i class="fas fa-chart-bar"></i> 데이터 분석</a></li>
+                <li><a href="franchise-settings.html"><i class="fas fa-cog"></i> 설정</a></li>
+            </ul>
+        </aside>
+
+        <main class="dashboard-content">
+            <div class="page-header">
+                <h2>계약 관리</h2>
+                <p>임대차 계약 진행 상황을 관리하고 문서를 검토하세요</p>
+                <button class="btn-primary btn-new-contract"><i class="fas fa-plus"></i> 새 계약 작성</button>
+            </div>
+
+            <!-- 계약 진행 보드 -->
+            <section class="contract-board-section">
+                <div class="contract-board">
+                    <div class="board-column">
+                        <div class="column-header">
+                            <h3>협상 중</h3>
+                            <span class="item-count">3</span>
+                        </div>
+                        <div class="column-body">
+                            <div class="contract-card">
+                                <div class="card-header">
+                                    <h4>강남대로 456 상가 3층</h4>
+                                    <div class="card-actions">
+                                        <button class="btn-card-menu"><i class="fas fa-ellipsis-v"></i></button>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="property-meta">
+                                        <span><i class="fas fa-expand-alt"></i> 35평</span>
+                                        <span><i class="fas fa-won-sign"></i> 보증금 5000만원</span>
+                                        <span><i class="fas fa-money-bill-wave"></i> 월세 450만원</span>
+                                    </div>
+                                    <div class="card-participants">
+                                        <div class="participant-item">
+                                            <span class="participant-avatar">김</span>
+                                            <span class="participant-name">김부동산</span>
+                                        </div>
+                                        <div class="participant-item">
+                                            <span class="participant-avatar">홍</span>
+                                            <span class="participant-name">홍길동</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-date">
+                                            <i class="far fa-calendar"></i> 시작: 2023.06.15
+                                        </div>
+                                        <button class="btn-card-detail">상세보기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="contract-card">
+                                <div class="card-header">
+                                    <h4>역삼동 123 빌딩 2층</h4>
+                                    <div class="card-actions">
+                                        <button class="btn-card-menu"><i class="fas fa-ellipsis-v"></i></button>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="property-meta">
+                                        <span><i class="fas fa-expand-alt"></i> 28평</span>
+                                        <span><i class="fas fa-won-sign"></i> 보증금 4000만원</span>
+                                        <span><i class="fas fa-money-bill-wave"></i> 월세 380만원</span>
+                                    </div>
+                                    <div class="card-participants">
+                                        <div class="participant-item">
+                                            <span class="participant-avatar">이</span>
+                                            <span class="participant-name">이중개</span>
+                                        </div>
+                                        <div class="participant-item">
+                                            <span class="participant-avatar">홍</span>
+                                            <span class="participant-name">홍길동</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-date">
+                                            <i class="far fa-calendar"></i> 시작: 2023.06.18
+                                        </div>
+                                        <button class="btn-card-detail">상세보기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="contract-card">
+                                <div class="card-header">
+                                    <h4>선릉로 789 상가 1층</h4>
+                                    <div class="card-actions">
+                                        <button class="btn-card-menu"><i class="fas fa-ellipsis-v"></i></button>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="property-meta">
+                                        <span><i class="fas fa-expand-alt"></i> 42평</span>
+                                        <span><i class="fas fa-won-sign"></i> 보증금 8000만원</span>
+                                        <span><i class="fas fa-money-bill-wave"></i> 월세 650만원</span>
+                                    </div>
+                                    <div class="card-participants">
+                                        <div class="participant-item">
+                                            <span class="participant-avatar">박</span>
+                                            <span class="participant-name">박에이전트</span>
+                                        </div>
+                                        <div class="participant-item">
+                                            <span class="participant-avatar">홍</span>
+                                            <span class="participant-name">홍길동</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-date">
+                                            <i class="far fa-calendar"></i> 시작: 2023.06.20
+                                        </div>
+                                        <button class="btn-card-detail">상세보기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="board-column">
+                        <div class="column-header">
+                            <h3>서류 검토</h3>
+                            <span class="item-count">2</span>
+                        </div>
+                        <div class="column-body">
+                            <div class="contract-card">
+                                <div class="card-header">
+                                    <h4>테헤란로 789 오피스 5층</h4>
+                                    <div class="card-actions">
+                                        <button class="btn-card-menu"><i class="fas fa-ellipsis-v"></i></button>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="property-meta">
+                                        <span><i class="fas fa-expand-alt"></i> 55평</span>
+                                        <span><i class="fas fa-won-sign"></i> 보증금 1억원</span>
+                                        <span><i class="fas fa-money-bill-wave"></i> 월세 780만원</span>
+                                    </div>
+                                    <div class="document-status">
+                                        <div class="status-item completed">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>임대차계약서</span>
+                                        </div>
+                                        <div class="status-item pending">
+                                            <i class="fas fa-clock"></i>
+                                            <span>권리금계약서</span>
+                                        </div>
+                                        <div class="status-item pending">
+                                            <i class="fas fa-clock"></i>
+                                            <span>영업 인수 관련 서류</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-date">
+                                            <i class="far fa-calendar"></i> 업데이트: 2023.06.22
+                                        </div>
+                                        <button class="btn-card-detail">상세보기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="contract-card">
+                                <div class="card-header">
+                                    <h4>압구정로 123 상가 1층</h4>
+                                    <div class="card-actions">
+                                        <button class="btn-card-menu"><i class="fas fa-ellipsis-v"></i></button>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="property-meta">
+                                        <span><i class="fas fa-expand-alt"></i> 38평</span>
+                                        <span><i class="fas fa-won-sign"></i> 보증금 9000만원</span>
+                                        <span><i class="fas fa-money-bill-wave"></i> 월세 720만원</span>
+                                    </div>
+                                    <div class="document-status">
+                                        <div class="status-item completed">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>임대차계약서</span>
+                                        </div>
+                                        <div class="status-item completed">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>권리금계약서</span>
+                                        </div>
+                                        <div class="status-item pending">
+                                            <i class="fas fa-clock"></i>
+                                            <span>기타 부속 서류</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-date">
+                                            <i class="far fa-calendar"></i> 업데이트: 2023.06.23
+                                        </div>
+                                        <button class="btn-card-detail">상세보기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="board-column">
+                        <div class="column-header">
+                            <h3>서명 진행</h3>
+                            <span class="item-count">1</span>
+                        </div>
+                        <div class="column-body">
+                            <div class="contract-card">
+                                <div class="card-header">
+                                    <h4>대치동 은마아파트 상가</h4>
+                                    <div class="card-actions">
+                                        <button class="btn-card-menu"><i class="fas fa-ellipsis-v"></i></button>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="property-meta">
+                                        <span><i class="fas fa-expand-alt"></i> 25평</span>
+                                        <span><i class="fas fa-won-sign"></i> 보증금 6000만원</span>
+                                        <span><i class="fas fa-money-bill-wave"></i> 월세 520만원</span>
+                                    </div>
+                                    <div class="signature-status">
+                                        <div class="signature-item completed">
+                                            <span class="participant-avatar">건</span>
+                                            <span>건물주: 완료</span>
+                                        </div>
+                                        <div class="signature-item pending">
+                                            <span class="participant-avatar">홍</span>
+                                            <span>홍길동: 대기중</span>
+                                        </div>
+                                        <div class="signature-item pending">
+                                            <span class="participant-avatar">이</span>
+                                            <span>이중개: 대기중</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="card-date">
+                                            <i class="far fa-calendar"></i> 업데이트: 2023.06.24
+                                        </div>
+                                        <button class="btn-card-detail">상세보기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 투어 예약 모달 -->
+    <div class="modal" id="tourModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>투어 예약</h3>
+                <button class="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="tourForm">
+                    <div class="form-group">
+                        <label>매물 선택</label>
+                        <select class="form-select">
+                            <option>매물을 선택하세요</option>
+                            <option>강남대로 123 상가 2층</option>
+                            <option>테헤란로 456 오피스텔 3층</option>
+                            <option>선릉로 789 상가 1층</option>
+                            <option>신사동 가로수길 인근 상가</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>투어 날짜</label>
+                        <input type="date" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label>투어 시간</label>
+                        <input type="time" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label>투어 참가자</label>
+                        <div class="participants-list">
+                            <div class="participant-item">
+                                <input type="text" class="form-input" value="홍길동">
+                                <button type="button" class="btn-remove-participant"><i class="fas fa-times"></i></button>
+                            </div>
+                            <button type="button" class="btn-add-participant"><i class="fas fa-plus"></i> 참가자 추가</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>투어 유형</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="tour-type" checked> 현장 투어
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="tour-type"> 화상 투어
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>특이사항</label>
+                        <textarea class="form-textarea" placeholder="확인하고 싶은 사항이나 요청 사항을 입력하세요"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-outline btn-cancel">취소</button>
+                        <button type="submit" class="btn-primary btn-reserve">예약하기</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/franchise-tours.js"></script>
+</body>
+</html>

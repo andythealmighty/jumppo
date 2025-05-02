@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>투어 일정 - 부동산 중개사 대시보드</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/broker-styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>AI 점포데이터 거래소</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="franchise-dashboard.html">프랜차이즈 대시보드</a></li>
+                    <li><a href="broker-dashboard.html" class="active">부동산 중개사 대시보드</a></li>
+                    <li><a href="#" class="user-profile">김중개님 <i class="fas fa-user-circle"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="broker-dashboard.html"><i class="fas fa-tachometer-alt"></i> 대시보드</a></li>
+                <li><a href="broker-property-management.html"><i class="fas fa-building"></i> 매물 관리</a></li>
+                <li><a href="broker-franchise-cards.html"><i class="fas fa-search"></i> 프랜차이즈 조건 카드</a></li>
+                <li><a href="broker-chat.html"><i class="fas fa-comment-alt"></i> 채팅 관리</a></li>
+                <li><a href="broker-tours.html" class="active"><i class="fas fa-calendar-alt"></i> 투어 일정</a></li>
+                <li><a href="broker-contracts.html"><i class="fas fa-file-contract"></i> 계약 관리</a></li>
+                <li><a href="broker-analytics.html"><i class="fas fa-chart-bar"></i> 성과 분석</a></li>
+                <li><a href="broker-settings.html"><i class="fas fa-cog"></i> 설정</a></li>
+            </ul>
+        </aside>
+
+        <main class="dashboard-content">
+            <div class="page-header">
+                <h2>투어 일정</h2>
+                <p>매물 투어 일정을 관리하고 새로운 일정을 추가하세요.</p>
+                <button class="btn-primary" id="btn-add-tour"><i class="fas fa-plus"></i> 새 투어 일정</button>
+            </div>
+
+            <div class="tour-filter-section">
+                <div class="filter-container">
+                    <div class="filter-row">
+                        <div class="search-input">
+                            <input type="text" placeholder="매물명, 프랜차이즈명 검색" class="form-input">
+                            <button class="btn-search"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="filter-selects">
+                            <select class="form-select">
+                                <option>모든 상태</option>
+                                <option>예정</option>
+                                <option>완료</option>
+                                <option>취소</option>
+                            </select>
+                            <select class="form-select">
+                                <option>정렬: 날짜순</option>
+                                <option>정렬: 최신순</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-view">
+                <div class="calendar-header">
+                    <div class="calendar-nav">
+                        <button class="btn-icon"><i class="fas fa-chevron-left"></i></button>
+                        <h3>2023년 6월</h3>
+                        <button class="btn-icon"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="view-options">
+                        <button class="btn-outline active">월간</button>
+                        <button class="btn-outline">주간</button>
+                        <button class="btn-outline">일간</button>
+                    </div>
+                </div>
+                
+                <div class="calendar-grid">
+                    <div class="calendar-days">
+                        <div class="weekday">일</div>
+                        <div class="weekday">월</div>
+                        <div class="weekday">화</div>
+                        <div class="weekday">수</div>
+                        <div class="weekday">목</div>
+                        <div class="weekday">금</div>
+                        <div class="weekday">토</div>
+                    </div>
+                    <div class="calendar-dates">
+                        <!-- 이전 달 마지막 날짜들 -->
+                        <div class="date prev-month">28</div>
+                        <div class="date prev-month">29</div>
+                        <div class="date prev-month">30</div>
+                        <div class="date prev-month">31</div>
+                        
+                        <!-- 현재 달 날짜들 -->
+                        <div class="date">1</div>
+                        <div class="date">2</div>
+                        <div class="date">3</div>
+                        <div class="date">4</div>
+                        <div class="date">5</div>
+                        <div class="date">6</div>
+                        <div class="date">7</div>
+                        <div class="date">8</div>
+                        <div class="date">9</div>
+                        <div class="date">10</div>
+                        <div class="date">11</div>
+                        <div class="date">12</div>
+                        <div class="date">13</div>
+                        <div class="date">14</div>
+                        <div class="date">15</div>
+                        <div class="date">16</div>
+                        <div class="date">17</div>
+                        <div class="date has-events">
+                            18
+                            <div class="event-indicator">1</div>
+                        </div>
+                        <div class="date">19</div>
+                        <div class="date has-events">
+                            20
+                            <div class="event-indicator">1</div>
+                        </div>
+                        <div class="date">21</div>
+                        <div class="date">22</div>
+                        <div class="date has-events">
+                            23
+                            <div class="event-indicator">2</div>
+                        </div>
+                        <div class="date">24</div>
+                        <div class="date">25</div>
+                        <div class="date">26</div>
+                        <div class="date">27</div>
+                        <div class="date">28</div>
+                        <div class="date">29</div>
+                        <div class="date">30</div>
+                        
+                        <!-- 다음 달 첫 날짜들 -->
+                        <div class="date next-month">1</div>
+                        <div class="date next-month">2</div>
+                        <div class="date next-month">3</div>
+                        <div class="date next-month">4</div>
+                        <div class="date next-month">5</div>
+                        <div class="date next-month">6</div>
+                        <div class="date next-month">7</div>
+                        <div class="date next-month">8</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="upcoming-tours-section">
+                <h3>예정된 투어</h3>
+                <div class="tours-list">
+                    <div class="tour-card">
+                        <div class="tour-date">
+                            <div class="date-day">18</div>
+                            <div class="date-month">6월</div>
+                            <div class="date-time">14:00</div>
+                        </div>
+                        <div class="tour-details">
+                            <div class="tour-property">
+                                <h4>강남대로 123 상가 2층</h4>
+                                <div class="property-meta">
+                                    <span><i class="fas fa-expand-alt"></i> 32평</span>
+                                    <span><i class="fas fa-won-sign"></i> 월세 450만원</span>
+                                </div>
+                            </div>
+                            <div class="tour-client">
+                                <div class="client-info">
+                                    <img src="assets/user1.jpg" alt="이프랜 프로필">
+                                    <div>
+                                        <h5>이프랜님 (스타벅스)</h5>
+                                        <p><i class="fas fa-phone"></i> 010-1234-5678</p>
+                                    </div>
+                                </div>
+                                <div class="tour-status upcoming">예정</div>
+                            </div>
+                            <div class="tour-notes">
+                                <p>고객님께서 전기 용량과 환기 시설에 관심이 많으십니다. 관련 자료 준비 필요.</p>
+                            </div>
+                        </div>
+                        <div class="tour-actions">
+                            <button class="btn-outline"><i class="fas fa-edit"></i> 수정</button>
+                            <button class="btn-outline"><i class="fas fa-calendar-alt"></i> 일정변경</button>
+                            <button class="btn-outline danger"><i class="fas fa-times"></i> 취소</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-card">
+                        <div class="tour-date">
+                            <div class="date-day">20</div>
+                            <div class="date-month">6월</div>
+                            <div class="date-time">11:00</div>
+                        </div>
+                        <div class="tour-details">
+                            <div class="tour-property">
+                                <h4>테헤란로 456 오피스텔 3층</h4>
+                                <div class="property-meta">
+                                    <span><i class="fas fa-expand-alt"></i> 45평</span>
+                                    <span><i class="fas fa-won-sign"></i> 월세 580만원</span>
+                                </div>
+                            </div>
+                            <div class="tour-client">
+                                <div class="client-info">
+                                    <img src="assets/user2.jpg" alt="김창업 프로필">
+                                    <div>
+                                        <h5>김창업님 (이디야)</h5>
+                                        <p><i class="fas fa-phone"></i> 010-9876-5432</p>
+                                    </div>
+                                </div>
+                                <div class="tour-status upcoming">예정</div>
+                            </div>
+                            <div class="tour-notes">
+                                <p>주변 상권 분석 자료와 유동인구 데이터를 미리 준비해주세요.</p>
+                            </div>
+                        </div>
+                        <div class="tour-actions">
+                            <button class="btn-outline"><i class="fas fa-edit"></i> 수정</button>
+                            <button class="btn-outline"><i class="fas fa-calendar-alt"></i> 일정변경</button>
+                            <button class="btn-outline danger"><i class="fas fa-times"></i> 취소</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-card">
+                        <div class="tour-date">
+                            <div class="date-day">23</div>
+                            <div class="date-month">6월</div>
+                            <div class="date-time">10:00</div>
+                        </div>
+                        <div class="tour-details">
+                            <div class="tour-property">
+                                <h4>홍대입구역 5번 출구 상가</h4>
+                                <div class="property-meta">
+                                    <span><i class="fas fa-expand-alt"></i> 28평</span>
+                                    <span><i class="fas fa-won-sign"></i> 월세 380만원</span>
+                                </div>
+                            </div>
+                            <div class="tour-client">
+                                <div class="client-info">
+                                    <img src="assets/user3.jpg" alt="박개발 프로필">
+                                    <div>
+                                        <h5>박개발님 (CU)</h5>
+                                        <p><i class="fas fa-phone"></i> 010-5555-7777</p>
+                                    </div>
+                                </div>
+                                <div class="tour-status upcoming">예정</div>
+                            </div>
+                            <div class="tour-notes">
+                                <p>주변 편의점 현황과 경쟁점 정보를 준비해주세요.</p>
+                            </div>
+                        </div>
+                        <div class="tour-actions">
+                            <button class="btn-outline"><i class="fas fa-edit"></i> 수정</button>
+                            <button class="btn-outline"><i class="fas fa-calendar-alt"></i> 일정변경</button>
+                            <button class="btn-outline danger"><i class="fas fa-times"></i> 취소</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="completed-tours-section">
+                <h3>완료된 투어</h3>
+                <div class="tours-list">
+                    <div class="tour-card">
+                        <div class="tour-date">
+                            <div class="date-day">10</div>
+                            <div class="date-month">6월</div>
+                            <div class="date-time">15:30</div>
+                        </div>
+                        <div class="tour-details">
+                            <div class="tour-property">
+                                <h4>강남대로 234 오피스텔 1층</h4>
+                                <div class="property-meta">
+                                    <span><i class="fas fa-expand-alt"></i> 25평</span>
+                                    <span><i class="fas fa-won-sign"></i> 월세 350만원</span>
+                                </div>
+                            </div>
+                            <div class="tour-client">
+                                <div class="client-info">
+                                    <img src="assets/user4.jpg" alt="최건물 프로필">
+                                    <div>
+                                        <h5>최건물님 (투썸플레이스)</h5>
+                                        <p><i class="fas fa-phone"></i> 010-2222-3333</p>
+                                    </div>
+                                </div>
+                                <div class="tour-status completed">완료</div>
+                            </div>
+                            <div class="tour-notes">
+                                <p>고객님이 매우 만족하셨으며, 계약 관련 논의를 진행 중입니다.</p>
+                            </div>
+                        </div>
+                        <div class="tour-actions">
+                            <button class="btn-outline"><i class="fas fa-file-alt"></i> 리포트</button>
+                            <button class="btn-primary"><i class="fas fa-file-contract"></i> 계약 진행</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- 투어 일정 추가 모달 -->
+    <div class="modal" id="tour-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>새 투어 일정 추가</h3>
+                <button class="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="tour-form">
+                    <div class="form-group">
+                        <label for="tour-property">매물 선택</label>
+                        <select id="tour-property" class="form-select">
+                            <option value="">매물을 선택하세요</option>
+                            <option>강남대로 123 상가 2층</option>
+                            <option>테헤란로 456 오피스텔 3층</option>
+                            <option>홍대입구역 5번 출구 상가</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tour-client">방문 고객</label>
+                        <select id="tour-client" class="form-select">
+                            <option value="">방문 고객을 선택하세요</option>
+                            <option>이프랜님 (스타벅스)</option>
+                            <option>김창업님 (이디야)</option>
+                            <option>박개발님 (CU)</option>
+                            <option>최건물님 (투썸플레이스)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tour-date">방문 날짜</label>
+                            <input type="date" id="tour-date" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="tour-time">방문 시간</label>
+                            <input type="time" id="tour-time" class="form-input">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tour-notes">메모</label>
+                        <textarea id="tour-notes" class="form-textarea" placeholder="투어 관련 특이사항이나 준비물을 메모하세요"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn-outline cancel-tour">취소</button>
+                        <button type="submit" class="btn-primary">일정 추가</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/broker-tours.js"></script>
+</body>
+</html>
